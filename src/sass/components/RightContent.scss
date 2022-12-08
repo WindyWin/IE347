@@ -1,9 +1,11 @@
 @media screen and (max-width: 786px) {
   .ant-table-thead {
     height: 30px !important;
+
     tr {
       height: 30px !important;
       border: 2px solid #c4c4c4 !important;
+
       th {
         font-size: 15px !important;
         color: #6e3b3b !important;
@@ -11,6 +13,7 @@
       }
     }
   }
+
   .ant-table-tbody {
     tr {
       td {
@@ -27,23 +30,28 @@
   .ant-table-summary {
     font-size: 17px !important;
   }
+
   .handleButton {
     width: 80% !important;
     left: 10% !important;
     display: inline-block !important;
+
     button {
       height: 45px !important;
       font-size: 15px !important;
     }
+
     button:last-child {
       margin-left: 10px !important;
     }
   }
+
   .handleButton_responsive {
     button:first-child {
       display: none;
     }
   }
+
   .PaymentFinished {
     padding: 50px 20px 0px 20px !important;
 
@@ -54,10 +62,12 @@
       margin-left: 45% !important;
     }
   }
-  .ant-table-tbody > tr > td {
+
+  .ant-table-tbody>tr>td {
     padding: 0px !important;
   }
-  .ant-table-thead > tr > th {
+
+  .ant-table-thead>tr>th {
     padding: 0px !important;
   }
 }
@@ -89,13 +99,13 @@
   padding: 0px 70px;
 
   .ant-input {
-    border: 1px solid #fea135;
+    border: 1px solid $yellow-color;
   }
 
   .ant-input:hover,
   .ant-input:focus,
   .ant-input:active {
-    border: 1px solid #fea135;
+    border: 1px solid $yellow-color;
     outline: none;
   }
 
@@ -105,7 +115,7 @@
   }
 
   .ant-input-group-addon {
-    border: 1px solid #fea135;
+    border: 1px solid $yellow-color;
     background-color: white;
   }
 }
@@ -119,7 +129,7 @@
 
       .ant-btn-icon-only:focus,
       ant-btn-icon-only:hover {
-        color: #fea135;
+        color: $yellow-color;
         background: transparent;
       }
 
@@ -133,7 +143,7 @@
       font-weight: 500;
 
       span {
-        color: #fea135;
+        color: $yellow-color;
         font-weight: 500;
       }
 
@@ -176,10 +186,11 @@
   text-align: center;
 
   span {
-    color: #fea135;
+    color: $yellow-color;
   }
 
   tr {
+
     th,
     td {
       border-bottom: none !important;
@@ -189,7 +200,7 @@
 
 .ant-select {
   .ant-select-selector {
-    border-color: #fea135 !important;
+    border-color: $yellow-color !important;
     text-align: left;
   }
 
@@ -255,6 +266,12 @@
   flex-direction: column;
   padding: 150px;
 
+  .DetailTotal {
+    .fontBold {
+      color: $yellow-color;
+    }
+  }
+
   .CartFinishIcon {
     font-size: 100px;
   }
@@ -264,11 +281,12 @@
     margin-bottom: 30px;
     color: #a25016;
     font-weight: bold;
-    width:fit-content;
+    width: fit-content;
     text-align: center;
     justify-self: center;
     align-self: center;
   }
+
   .fontBold {
     font-weight: bold;
   }
@@ -285,6 +303,7 @@
     margin-left: 500px;
     margin-top: 80px;
   }
+
   button:hover,
   button:link,
   button:visited,

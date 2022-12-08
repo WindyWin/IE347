@@ -34,7 +34,7 @@ function PaymentFinished() {
       </div>
       <div className="DetailTotal">
         <Typography.Text>Tổng cộng: </Typography.Text>
-        <Typography.Text className="fontBold" style={{ color: "#FEA135" }}>
+        <Typography.Text className="fontBold" >
           {dataFormat}
         </Typography.Text>
       </div>

@@ -32,7 +32,7 @@ function Intro() {
       </Helmet>
       <section className="intro-member">
         <div className="intro-member__text">
-          <Title style={{ color: "#FEA135", fontWeight: "bold" }}>
+          <Title style={{ fontWeight: "bold" }}>
             Đội ngũ nhân viên
           </Title>
           <Text style={{ fontSize: "20px" }}>

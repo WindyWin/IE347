@@ -1,11 +1,12 @@
 .Wrapper {
   width: 100%;
-  border: 1px solid #ffc107;
+  border: 1px solid $yellow-color;
   padding: 30px;
   text-align: justify;
   margin: 0 auto;
+
   h1 {
-    color: #ffc107;
+    color: $yellow-color;
     font-size: 20px;
     font-weight: 500;
   }
@@ -14,12 +15,13 @@
     font-size: 14px;
     font-weight: 500;
   }
+
   .pTitle {
     font-weight: 500;
   }
 
   .service {
-    color: #ffc107;
+    color: $yellow-color;
   }
 
   .imgCustom {
@@ -34,6 +36,7 @@
     padding: 10px 10px;
   }
 }
+
 .main-service-imgLeft {
   position: relative;
   width: 100%;
@@ -42,22 +45,26 @@
   border-bottom-left-radius: 100px;
   border-top-right-radius: 200px;
   margin-bottom: 50px;
+
   img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
   }
+
   .main-content {
     font-weight: 450;
     position: absolute;
     top: 10px;
     left: 170px;
     width: 70%;
+
     p {
       margin-bottom: 5px !important;
       color: black;
     }
   }
+
   span {
     position: absolute;
     right: 50px;
@@ -66,6 +73,7 @@
     color: red;
   }
 }
+
 .main-service-imgRight {
   position: relative;
   width: 100%;
@@ -75,6 +83,7 @@
   border-bottom-right-radius: 100px;
   border-top-left-radius: 200px;
   margin-bottom: 50px;
+
   img {
     position: absolute;
     right: 0px;
@@ -82,16 +91,19 @@
     height: 150px;
     border-radius: 50%;
   }
+
   .main-content {
     font-weight: 450;
     position: absolute;
     top: 10px;
     left: 100px;
     width: 70%;
+
     h2 {
       position: absolute;
       right: 20px;
     }
+
     p {
       margin-left: -30px;
       margin-top: 30px;
@@ -99,6 +111,7 @@
       color: black;
     }
   }
+
   span {
     position: absolute;
     left: 50px;
@@ -107,36 +120,45 @@
     color: red;
   }
 }
+
 @media screen and (max-width: 500px) {
+
   .main-service-imgRight,
   .main-service-imgLeft {
     img {
       width: 100px;
       height: 100px;
     }
+
     height: 100px !important;
+
     .main-content {
       h2 {
         width: 60%;
         transform: translateY(10%);
       }
+
       p {
         display: none;
       }
     }
   }
+
   .main-service-imgLeft {
     h2 {
       margin-left: -50px;
     }
+
     span {
       bottom: 2px;
     }
   }
+
   .main-service-imgRight {
     h2 {
       right: 120px !important;
     }
+
     span {
       bottom: 2px;
     }

@@ -1,14 +1,14 @@
 .LeftContent__Layout {
-  .LeftContent__Layout--Header {
+  &--Header {
     background: #e48039;
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
     padding: 18px;
     height: 99px;
   }
 
-  .LeftContent__Layout--Content {
+  &--Content {
     background-color: white;
     text-align: center;
     padding: 30px 0px 0px 95px;
@@ -16,8 +16,8 @@
     .ant-steps-item-process {
       .ant-steps-item-container {
         .ant-steps-item-icon {
-          background: #fea135;
-          border-color: #fea135;
+          background: $yellow-color;
+          border-color: $yellow-color;
           width: 50px;
           height: 50px;
           padding: 8px;
@@ -25,8 +25,9 @@
 
         .ant-steps-item-content {
           padding: 8px;
+
           .ant-steps-item-title {
-            color: #fea135;
+            color: $yellow-color;
             font-size: 20px;
           }
         }
@@ -42,32 +43,39 @@
           padding: 8px;
           height: 50px;
         }
+
         .ant-steps-item-content {
           padding: 8px;
+
           .ant-steps-item-title {
             font-size: 20px;
           }
         }
       }
     }
+
     .ant-steps-item-finish {
       .ant-steps-item-container {
         .ant-steps-item-icon {
           width: 50px;
           height: 50px;
           padding: 8px;
-          border-color: #fea135;
+          border-color: $yellow-color;
         }
+
         .ant-steps-icon {
-          color: #fea135;
+          color: $yellow-color;
         }
+
         .ant-steps-item-tail:after {
-          background-color: #fea135 !important;
+          background-color: $yellow-color !important;
         }
+
         .ant-steps-item-content {
           padding: 8px;
+
           .ant-steps-item-title {
-            color: #fea135;
+            color: $yellow-color;
             font-size: 20px;
           }
         }
@@ -81,6 +89,7 @@
             left: 25px;
             top: 12px;
           }
+
           .ant-steps-item-tail:after {
             background-color: #c4c4c4;
           }

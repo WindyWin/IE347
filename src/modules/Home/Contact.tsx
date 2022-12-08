@@ -48,7 +48,7 @@ function Contact() {
             rules={[{ required: true, message: "Chưa nhập tên" }]}
           >
             <Input
-              placeholder="Tên"
+              placeholder="Họ và tên"
               onChange={(e) => {
                 Information.name = e.target.value.toString();
               }}

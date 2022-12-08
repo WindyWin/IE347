@@ -2,22 +2,27 @@
   .intro-member__text {
     text-align: center;
     padding: 3%;
+    color: $yellow-color;
   }
+
   .intro-member__elements {
     width: 90%;
     margin: 0 auto;
   }
 }
+
 .component-block {
   width: 100%;
   height: 450px;
   background: #2b2b2b;
+
   .block-img {
     img {
       width: 100% !important;
       height: 356px !important;
     }
   }
+
   .block-divider {
     border: 3px solid #a25016;
     transform: rotate(-0.54deg);
@@ -25,14 +30,17 @@
     margin: auto;
     margin-top: 10px;
   }
+
   .block-name {
     margin-top: 5px;
     color: #fff;
+
     .name-heading {
       font-size: 24px;
       text-align: center;
       margin-bottom: 0px !important;
     }
+
     .name-des {
       font-size: 16px;
       text-align: center;
@@ -47,26 +55,31 @@
   width: 100%;
   background: #454343;
   display: flex;
+
   img {
     width: 150%;
     height: auto;
   }
+
   .about-text {
     margin-left: 12%;
     margin-right: 10px;
   }
+
   .about-text-header {
     font-size: 36px;
     font-weight: 400;
     color: #ffffff;
     margin-bottom: 5px !important;
   }
+
   .about-text-content {
     font-size: 20px;
     color: #ffffff;
     word-spacing: 1px;
     text-align: justify;
   }
+
   .block-divider {
     border: 3px solid #a25016;
     transform: rotate(-0.54deg);
@@ -74,9 +87,11 @@
     margin-bottom: 30px;
   }
 }
+
 .intro-service {
   width: 90%;
   margin: 0 auto;
+
   .block-divider {
     border: 3px solid #a25016;
     transform: rotate(-0.54deg);
@@ -86,16 +101,19 @@
     margin-top: 50px;
   }
 }
+
 .service-block {
   width: 100%;
   max-height: 270px;
   background: #454343;
+
   .service-icon {
     font-size: 70px;
 
     color: #fff;
     margin: 10px 147px;
   }
+
   .service-title {
     font-size: 32px;
     color: #ffffff;
@@ -103,6 +121,7 @@
     margin-bottom: 0 !important;
     font-weight: 500;
   }
+
   .service-des {
     font-size: 20px;
     color: #ffffff;
@@ -110,6 +129,7 @@
     margin: 2px 8px;
   }
 }
+
 .intro-more {
   .block-divider {
     border: 3px solid #a25016;
@@ -119,14 +139,17 @@
     margin-bottom: 50px;
     margin-top: 50px;
   }
+
   .intro-more-img {
     width: 100%;
     margin-bottom: 50px;
   }
 }
+
 @media only screen and (max-width: 768px) {
   .intro-member {
     margin-bottom: 15%;
+
     .intro-member__text {
       font-size: 24px !important;
       text-align: center;
@@ -137,18 +160,22 @@
     .about-img {
       display: none;
     }
+
     .about-text {
       margin: 5% 3% 0 3%;
     }
   }
+
   .intro-service {
     .block-divider {
       margin: 5% auto;
     }
   }
+
   .service-block {
     width: auto;
   }
+
   .intro-more {
     .block-divider {
       margin: 5% auto;

@@ -1,0 +1,9 @@
+.ant-btn-primary {
+
+    &:hover,
+    &:focus,
+    &:active {
+        border: $yellow-color !important;
+        background-color: $yellow-color !important;
+    }
+}
