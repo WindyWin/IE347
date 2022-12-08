@@ -1,8 +1,7 @@
+import { Button, Col, Pagination, Row } from "antd";
 import { useState } from "react";
 import ProductCard from "./ProductCard";
-import "../../sass/Blog/ProductCategorySection2.scss";
 import { product } from "./type";
-import { Row, Col, Pagination,Button } from "antd";
 
 interface Props {
   productList: product[];
@@ -10,9 +9,9 @@ interface Props {
   productsPerPage?: number
 }
 
-const ProductCategorySection2 = ({ productList, sectionName,productsPerPage }: Props) => {
+const ProductCategorySection2 = ({ productList, sectionName, productsPerPage }: Props) => {
   const [page, setPage] = useState<number>(0);
-  const [productPerPage, setProductPerPage] = useState<number>(productsPerPage??8);
+  const [productPerPage, setProductPerPage] = useState<number>(productsPerPage ?? 8);
   function handlPageChange(page: number, pageSize: number) {
     setPage(page - 1);
   }
@@ -64,8 +63,8 @@ const ProductCategorySection2 = ({ productList, sectionName,productsPerPage }: P
               <Button
                 className={`${type}-page-button page-button`}
               >
-                 {(type=='next')&&'Trang sau'}
-                 {(type=='prev')&&'Trang trước'}
+                {(type == 'next') && 'Trang sau'}
+                {(type == 'prev') && 'Trang trước'}
               </Button>
             )}
             onChange={handlPageChange}
@@ -73,7 +72,7 @@ const ProductCategorySection2 = ({ productList, sectionName,productsPerPage }: P
         </div>
       </div>
       <div className="section__bottom">
-        <Row gutter={[16,16]}>
+        <Row gutter={[16, 16]}>
           {productList
             .slice(page * productPerPage, (page + 1) * productPerPage)
             .map((item) => {

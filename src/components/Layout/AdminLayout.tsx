@@ -5,7 +5,6 @@ import { Layout, Menu, message } from "antd";
 import React, { useEffect, useState } from "react";
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import AdminLogin from "../../modules/Admin/AdminLogin";
-import "../../sass/Admin/AdminLayout.scss";
 
 function AdminLayout() {
   const location = useLocation();

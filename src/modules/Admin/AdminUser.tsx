@@ -1,7 +1,6 @@
 import { Drawer } from "antd";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../../sass/Admin/Admin.scss";
 import AdminContentHeader from "./AdminContentHeader";
 import AdminCreateUser from "./AdminCreateUser";
 

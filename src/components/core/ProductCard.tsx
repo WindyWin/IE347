@@ -5,7 +5,6 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import { Link } from "react-router-dom";
 import { AddToCartIcon, SearchIcon } from "../../assets/icons/BlogCustomIcon";
 import toSlug from "../../assets/toSlug";
-import "../../sass/Blog/ProductCard.scss";
 import { productCardProps } from "./type";
 
 const ProductCard = ({ product }: productCardProps) => {

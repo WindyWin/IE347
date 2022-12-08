@@ -5,7 +5,6 @@ import { useLocation } from "react-router-dom";
 import { categoryTranslate } from "../../assets/categoryTranslate";
 import { Category, ProductCategorySection2 } from "../../components/core";
 import Loader from "../../components/core/Loader";
-import "../../sass/Store/Store.scss";
 
 function Store() {
   const location = useLocation();

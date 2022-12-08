@@ -1,7 +1,6 @@
 import { Col, Row } from "antd";
 import { useParams } from "react-router-dom";
 // import {blogList} from "../Blog/data";
-import "../../sass/BlogDetail/BlogDetail.scss";
 // import { Helmet } from "react-helmet";
 
 const BlogDetail = () => {

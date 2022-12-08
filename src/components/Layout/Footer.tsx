@@ -1,11 +1,10 @@
-import "../../sass/Home/Footer.scss";
-import {Row, Col} from "antd";
+import { Col, Row } from "antd";
 
 function Footer() {
   return (
     <section className="footer-container">
       <Row className="footer-content" >
-        <Col xl={9} lg={8}  md={8} sm={24} xs={24} className="footer-left-content" >
+        <Col xl={9} lg={8} md={8} sm={24} xs={24} className="footer-left-content" >
           <div className="logo-container">
             <img
               src={require("../../assets/images/footer/SenShop-Logo-clone.png")}

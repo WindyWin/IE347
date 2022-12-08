@@ -1,8 +1,7 @@
+import { Col, Row } from "antd";
 import React from "react";
-import { Row, Col } from "antd";
 import { Outlet } from "react-router-dom";
 import { Category } from "../../components/core";
-import "../../sass/Store/Store.scss";
 
 function ServiceLayout() {
   return (

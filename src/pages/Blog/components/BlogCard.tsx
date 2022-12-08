@@ -1,13 +1,10 @@
 import { Card } from "antd";
-import {
-  LikeIcon,
-  CommentIcon,
-  ShareIcon,
-} from "../../../assets/icons/BlogCustomIcon";
-import "../../../sass/Blog/BlogCard.scss";
-import { Link } from "react-router-dom";
-import toSlug from "../../../assets/toSlug";
 import moment from "moment";
+import { Link } from "react-router-dom";
+import {
+  CommentIcon, LikeIcon, ShareIcon
+} from "../../../assets/icons/BlogCustomIcon";
+import toSlug from "../../../assets/toSlug";
 
 moment.locale("vi");
 export interface blogCard {

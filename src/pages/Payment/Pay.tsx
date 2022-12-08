@@ -1,14 +1,13 @@
 import React from "react";
-import "../../sass/Pay/Pay.scss";
 
-import { Row, Col } from "antd";
+import { Col, Row } from "antd";
+import { useState } from "react";
+import { Helmet } from "react-helmet";
 import {
   LeftContentContent,
-  LeftContentHeader,
+  LeftContentHeader
 } from "./components/LeftContent";
-import { useState } from "react";
 import RightContent from "./components/RightContent";
-import { Helmet } from "react-helmet";
 
 function Pay() {
   const [current, setCurrent] = useState(0);

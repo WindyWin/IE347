@@ -1,11 +1,10 @@
-import "../../sass/Home/Reviews.scss";
-import { Row, Col } from "antd";
+import { Col, Row } from "antd";
 
 function Reviews() {
     return (
         <section className="content">
             <p>Đánh giá của khách hàng</p>
-            <Row gutter={[20,20]}>
+            <Row gutter={[20, 20]}>
                 <Col xl={8} lg={8} md={12} xs={24}>
                     <div id="image1">
                         <img src={require("./Assets/Mision-min-1.png")} alt="image 1" />

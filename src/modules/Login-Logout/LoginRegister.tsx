@@ -1,9 +1,7 @@
-import { useState, useEffect, useRef } from "react";
-import React from "react";
-import "../../sass/Login-Logout/Login-Logout.scss";
-import { Form, Input, Button, Typography } from "antd";
-import { Login, Register } from "./components";
+import { Button, Form, Input, Typography } from "antd";
+import React, { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet";
+import { Login, Register } from "./components";
 
 function LoginRegister() {
   const [clickChange, setClickChange] = useState<boolean>(true);

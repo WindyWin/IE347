@@ -1,6 +1,5 @@
-import React from "react";
 import { Layout } from "antd";
-import "../../../sass/Pay/LeftContent.scss";
+import React from "react";
 
 import { Steps } from "antd";
 
@@ -63,3 +62,4 @@ function LeftContentContent({ current }: CurrentProps) {
 }
 
 export { LeftContentHeader, LeftContentContent };
+

@@ -1,0 +1,37 @@
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+// Import library from node_modules
+
+
+@import 'base/reset';
+@import 'base/global';
+
+@import 'layout/AdminLayout';
+@import 'layout/Footer.scss';
+
+@import 'components/AdminLoginForm.scss';
+@import 'components/BlogCard.scss';
+@import 'components/BlogCategory.scss';
+@import 'components/BlogSideCard.scss';
+@import 'components/LeftContent.scss';
+@import 'components/RightContent.scss';
+@import 'components/Loader.scss';
+@import "components/ProductCard.scss";
+@import "components/ProductCategorySection.scss";
+@import "components/ProductCategorySection2.scss";
+
+@import "views/Admin.scss";
+@import "views/BlogDetail.scss";
+@import "views/Detail.scss";
+@import "views/Home.scss";
+@import "views/Intro.scss";
+@import "views/Login-Logout.scss";
+@import "views/Pay.scss";
+@import "views/Profile.scss";
+@import "views/Reviews.scss";
+@import "views/Service.scss";
+@import "views/Store.scss";
+
+@import 'base/utils';

@@ -1,5 +1,4 @@
 import { Button, Form, Input, Modal, Typography } from "antd";
-import "../../sass/Home/Home.scss";
 import { information } from "./type";
 
 // const { confirm } = Modal;

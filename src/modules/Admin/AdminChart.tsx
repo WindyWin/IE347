@@ -25,13 +25,7 @@ function AdminChart() {
                         }
                     ]
                 },
-                options: {
-                    plugins: {
-                        colorschemes: {
-                            scheme: 'brewer.Paired12',
-                        }
-                    }
-                }
+
             }
         );
     }, [])

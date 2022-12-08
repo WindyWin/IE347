@@ -2,7 +2,6 @@ import { Button, Checkbox, Form, Input } from "antd";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
-import "../../../sass/Login-Logout/Login-Logout.scss";
 
 function Login() {
 

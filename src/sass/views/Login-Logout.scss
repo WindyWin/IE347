@@ -12,20 +12,24 @@
   .Logout--logo {
     text-align: center;
   }
+
   .login--form,
   .Logout--form {
     margin-left: 74px;
   }
+
   .ant-form label {
     font-size: 20px;
   }
+
   // .ant-row{
   //   display:block;
   // }
   // .ant-col{
   //   display: inline;
   // }
-  .ant-input-password,.input--css {
+  .ant-input-password,
+  .input--css {
     width: 90%;
     height: 50px;
     border-radius: 20px;
@@ -33,10 +37,11 @@
     font-size: 20px;
     box-shadow: 0 3px 4px #c4c4c4;
   }
-  
+
   .ant-form-item {
     font-size: 20px;
   }
+
   .ant-btn-primary {
     width: 90%;
     height: 50px;
@@ -45,7 +50,7 @@
     box-sizing: border-box;
     border-radius: 20px;
     font-size: 20px;
-    color: #000;
+    color: $black-color;
   }
 
   .login--text,
@@ -53,11 +58,13 @@
     font-size: 20px;
     text-align: center;
   }
+
   .facebook-google {
     width: 90%;
     display: flex;
     justify-content: space-between;
   }
+
   .facebook-google--css {
     width: 45%;
     height: 61px;
@@ -68,10 +75,12 @@
     border-radius: 20px;
     box-shadow: 0 3px 4px #c4c4c4;
   }
+
   .logout-another {
     margin-left: 80px;
   }
 }
+
 .login-logout__wrapper {
   margin: 0 auto;
   margin-top: 50px;
@@ -84,6 +93,7 @@
   background-color: #a25016;
   color: #fff;
   cursor: pointer;
+
   .login-logout--login,
   .login-logout--logout {
     width: 350px;
@@ -93,14 +103,17 @@
     text-align: center;
     padding-top: 20px;
   }
+
   .login-logout--login {
     border-radius: 10px 0px 0px 0px;
   }
+
   .active {
     background-color: #fff;
-    color: #000;
+    color: $black-color;
   }
 }
+
 .to-top {
   position: fixed;
   bottom: 30px;
@@ -111,24 +124,29 @@
   padding: 5px;
   border-radius: 30%;
 }
+
 .to-top:hover {
   background-color: #a25016;
 }
+
 @media screen and (max-width: 786px) {
   .login-logout__wrapper {
     width: 95%;
     margin-right: 10px;
     margin-left: 10px !important;
+
     .login-logout--login,
     .login-logout--logout {
       width: 100%;
     }
   }
+
   .login,
   .Logout {
     width: 95%;
     margin-left: 10px !important;
   }
+
   .logout-another {
     p {
       margin-left: 35% !important;

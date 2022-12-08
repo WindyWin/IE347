@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 import cart from "../../assets/images/shoppingCart.svg";
 import toSlug from "../../assets/toSlug";
-import "../../sass/Home/Home.scss";
 const { Search } = Input;
 const { TabPane } = Tabs;
 const Header = () => {

@@ -1,7 +1,6 @@
 import React from "react";
-import "../../../sass/Pay/RightContent.scss";
-import Cart from "../../../modules/Pay/Cart"
-import PayInformation from "../../../modules/Pay/PayInformation"
+import Cart from "../../../modules/Pay/Cart";
+import PayInformation from "../../../modules/Pay/PayInformation";
 import PaymentFinished from "../../../modules/Pay/PaymentFinished";
 
 interface Props {

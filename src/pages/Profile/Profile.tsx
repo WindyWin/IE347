@@ -11,7 +11,6 @@ import {
 import momment from "moment";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../../sass/Profile/Profile.scss";
 
 momment.locale("vi");
 

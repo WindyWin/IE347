@@ -1,5 +1,3 @@
-import React from "react";
-import "../../sass/Loader.scss";
 function Loader() {
   return (
     // <div classNameName="spinner spinner-large spinner-blue spinner-slow"></div>

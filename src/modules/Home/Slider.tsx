@@ -4,7 +4,6 @@ import { Carousel } from 'antd';
 // import Slider3 from "../../assets/images/slider3.png"
 // import Slider4 from "../../assets/images/slider4.png"
 // import Slider5 from "../../assets/images/slider5.png"
-import "../../sass/Home/Home.scss";
 const Slider = () => {
     return (
         <Carousel className='slider' autoplay >

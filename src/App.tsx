@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import { Loader } from "./components/core";
 import RouterView from "./router/router";
 import { handelRecursion } from "./router/type";
-import "./sass/App.scss";
+import "./sass/index.scss";
 
 function App() {
 

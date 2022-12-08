@@ -1,8 +1,7 @@
+import { Col, Pagination, Row } from "antd";
+import { useState } from "react";
 import BlogCard, { blogCard } from "./BlogCard";
 import BlogSideCardList from "./BlogSideCardList";
-import { Row, Col, Pagination } from "antd";
-import { useState } from "react";
-import "../../../sass/Blog/BlogCategory.scss";
 
 interface blogCategoryProps {
   blogList: blogCard[];
@@ -20,7 +19,7 @@ const BlogCategory = ({ blogList, categoryList }: blogCategoryProps) => {
   const featuredBlog = blogList.slice(0, 3);
   // .sort((blogA,blogB) =>  {console.log(blogA.like);
   //  return blogB.like.length-blogA.like.length})
-    
+
 
 
   // const [recentBlog, setRecentBlog] = useState<blogCard[]>(
@@ -70,13 +69,13 @@ const BlogCategory = ({ blogList, categoryList }: blogCategoryProps) => {
             className="blog-card-container"
           >
             <Row gutter={[16, 16]}>
-              {blogList.slice(page * blogPerPage, (page + 1) * blogPerPage )
+              {blogList.slice(page * blogPerPage, (page + 1) * blogPerPage)
                 .map((blog, index) => (
                   <Col md={12} sm={24} key={index} className="blog-card-wraper">
                     <BlogCard blog={blog} type="large" />
                   </Col>
-                
-                // .filter((blog) => blog.categories === currentCategory)
+
+                  // .filter((blog) => blog.categories === currentCategory)
                 ))}
             </Row>
           </Col>

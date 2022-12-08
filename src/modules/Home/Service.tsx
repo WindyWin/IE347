@@ -1,11 +1,10 @@
 import { Button, Typography } from "antd";
+import { useEffect, useRef, useState } from "react";
+import { FaHandHoldingUsd, FaRegHospital } from "react-icons/fa";
+import { GiHairStrands } from "react-icons/gi";
 import hospital from "../../assets/images/hospital.jpg";
 import price from "../../assets/images/price.jpg";
 import spa from "../../assets/images/spa.jpg";
-import { useState, useEffect,useRef } from "react";
-import { FaRegHospital, FaHandHoldingUsd } from "react-icons/fa";
-import { GiHairStrands } from "react-icons/gi";
-import "../../sass/Home/Home.scss";
 
 function Service() {
   const { Title, Text } = Typography;
@@ -28,15 +27,15 @@ function Service() {
     const serviceBlocks = document.querySelectorAll(".home-service-element");
     serviceBlocks.forEach((e) => {
       e.addEventListener("mouseover", () => {
-        isPaused.current=true;
+        isPaused.current = true;
       });
       e.addEventListener("mouseleave", () => {
-        isPaused.current=false;
+        isPaused.current = false;
       })
     });
     return () => {
       clearInterval(timer)
-      
+
     };
   }, []);
   return (
@@ -56,7 +55,7 @@ function Service() {
         </ul>
         <div
           className="home-service-block  active"
-          
+
         >
           <div className="home-service-element ">
             <img src={hospital} alt="dich-vu-kham-benh" />
@@ -77,7 +76,7 @@ function Service() {
 
         <div
           className="home-service-block  "
-          
+
         >
           <div className="home-service-element ">
             <div className="service-block-des2">
@@ -100,7 +99,7 @@ function Service() {
 
         <div
           className="home-service-block  "
-          
+
         >
           <div className="home-service-element">
             <img src={price} alt="gia-ca" />

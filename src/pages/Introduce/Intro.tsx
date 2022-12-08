@@ -1,10 +1,9 @@
-import "../../sass/Intro/Intro.scss";
-import { Helmet } from "react-helmet";
 import { Col, Row, Typography } from "antd";
-import { IntroMember, IntroService } from "./components";
+import { Helmet } from "react-helmet";
 import about from "../../assets/images/about.jpg";
 import avatar from "../../assets/images/avatar.jpg";
 import more from "../../assets/images/more.png";
+import { IntroMember, IntroService } from "./components";
 function Intro() {
   const { Title, Text } = Typography;
   return (

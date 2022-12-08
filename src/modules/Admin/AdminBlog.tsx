@@ -1,6 +1,5 @@
 import { Drawer, Table } from "antd";
 import { useEffect, useState } from "react";
-import "../../sass/Admin/Admin.scss";
 import AdminAddBlog from "./AdminAddBlog";
 import AdminContentHeader from "./AdminContentHeader";
 import { blogColumns } from "./type";
