@@ -1,7 +1,42 @@
 import { faker } from "@faker-js/faker";
 
+import blogRawData from "../../assets/data/blogs.json";
+import productRawData from "../../assets/data/products.json";
 import { product } from "../../components/core/type";
 
+export const productData = productRawData.map(data => {
+    return {
+        _id: faker.database.mongodbObjectId(),
+        name: data.name,
+        description: data.description,
+        stock: data.stock,
+        comments: [
+        ],
+        price: data.price,
+        salePrice: data.salePrice,
+        variant: {
+            size: data.variant.size,
+            color: data.variant.color
+        },
+        images: data.images.map(image =>
+        ({
+            url: faker.image.imageUrl(640, 480, "animals", true)
+        })),
+        categories: data.categories,
+
+    }
+})
+export const blogData = blogRawData.map(data => {
+    return {
+        ...data,
+        _id: faker.database.mongodbObjectId(),
+        //convert $date to moment
+        date: data.date["$date"],
+        image: {
+            url: faker.image.imageUrl(),
+        }
+    }
+})
 
 
 export const generateCategory = (categoryList: string[] = [
@@ -48,6 +83,8 @@ export const generateProductList = (num: number): product[] => {
     return fakeData;
 
 }
+
+
 
 
 

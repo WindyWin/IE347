@@ -1,4 +1,5 @@
 export interface product {
+  _id: string;
   name: string;
   description: string;
   stock: number,
@@ -8,9 +9,8 @@ export interface product {
   variant?: Variant;
   images: Image[];
   categories: string[];
-  _id: string;
 }
-interface Variant {
+export interface Variant {
   size: string[];
   color: string[];
 }

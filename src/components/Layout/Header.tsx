@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 import cart from "../../assets/images/shoppingCart.svg";
-import toSlug from "../../assets/toSlug";
+import toSlug from "../../modules/utils/toSlug";
 const { Search } = Input;
 const { TabPane } = Tabs;
 const Header = () => {

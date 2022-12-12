@@ -1,9 +1,9 @@
-import React from 'react'
-import Header from './Header';
-import Navigation from '../core/Navigation';
+import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Footer from './Footer'
-import {ScrollToTop} from '../core';
+import { ScrollToTop } from '../core';
+import Navigation from '../core/Navigation';
+import Footer from './Footer';
+import Header from './Header';
 
 const Layout = () => {
   return (

@@ -24,7 +24,7 @@
   }
 
   .block-divider {
-    border: 3px solid #a25016;
+    border: 3px solid $brown-color;
     transform: rotate(-0.54deg);
     width: 120px;
     margin: auto;
@@ -81,7 +81,7 @@
   }
 
   .block-divider {
-    border: 3px solid #a25016;
+    border: 3px solid $brown-color;
     transform: rotate(-0.54deg);
     width: 120px;
     margin-bottom: 30px;
@@ -93,7 +93,7 @@
   margin: 0 auto;
 
   .block-divider {
-    border: 3px solid #a25016;
+    border: 3px solid $brown-color;
     transform: rotate(-0.54deg);
     width: 120px;
     margin: 0 auto;
@@ -132,7 +132,7 @@
 
 .intro-more {
   .block-divider {
-    border: 3px solid #a25016;
+    border: 3px solid $brown-color;
     transform: rotate(-0.54deg);
     width: 120px;
     margin: 0 auto;

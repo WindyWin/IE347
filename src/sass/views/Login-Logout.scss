@@ -90,7 +90,7 @@
   border-radius: 10px 10px 0px 0px;
   display: flex;
   justify-self: space-between;
-  background-color: #a25016;
+  background-color: $brown-color;
   color: #fff;
   cursor: pointer;
 
@@ -120,13 +120,13 @@
   right: 100px;
   font-size: 40px;
   color: #ffe2cd;
-  background-color: #a25016c1;
+  background-color: $brown-color;
   padding: 5px;
   border-radius: 30%;
 }
 
 .to-top:hover {
-  background-color: #a25016;
+  background-color: $brown-color;
 }
 
 @media screen and (max-width: 786px) {

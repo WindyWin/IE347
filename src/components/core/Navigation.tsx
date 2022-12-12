@@ -1,12 +1,12 @@
-import { Menu } from "antd";
 import {
   CaretDownOutlined,
   CloseSquareOutlined,
-  MenuOutlined,
+  MenuOutlined
 } from "@ant-design/icons";
+import { Menu } from "antd";
 import { Link, useLocation } from "react-router-dom";
-import phone from "../../assets/images/phone.svg";
 import face from "../../assets/images/face.svg";
+import phone from "../../assets/images/phone.svg";
 import youtube from "../../assets/images/youtube.svg";
 import { listSubMenu } from "../../modules/Home/type";
 

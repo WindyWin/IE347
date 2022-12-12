@@ -2,9 +2,9 @@ import { Col, Row } from "antd";
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
-import { categoryTranslate } from "../../assets/categoryTranslate";
 import { Category, ProductCategorySection2 } from "../../components/core";
 import Loader from "../../components/core/Loader";
+import { categoryTranslate } from "../../modules/utils/categoryTranslate";
 
 function Store() {
   const location = useLocation();

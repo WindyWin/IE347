@@ -7,8 +7,8 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link, useParams } from "react-router-dom";
 // 
-import { categoryTranslate } from "./../../assets/categoryTranslate";
-import { RelatedProduct } from "./../../modules/Detail/Data";
+import { RelatedProduct } from "../../modules/Detail/Data";
+import { categoryTranslate } from "../../modules/utils/categoryTranslate";
 import Comment from "./Comment";
 import CommentEditor from "./CommentEditor";
 import Loader from "./Loader";

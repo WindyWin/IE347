@@ -1,6 +1,6 @@
-import Header from '../../components/Layout/Header'
 import Navigation from '../../components/core/Navigation'
 import Footer from '../../components/Layout/Footer'
+import Header from '../../components/Layout/Header'
 import Content404 from '../NotFound/Content404'
 function NotFound() {
   return (

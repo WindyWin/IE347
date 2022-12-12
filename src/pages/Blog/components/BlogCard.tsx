@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import {
   CommentIcon, LikeIcon, ShareIcon
 } from "../../../assets/icons/BlogCustomIcon";
-import toSlug from "../../../assets/toSlug";
+import toSlug from "../../../modules/utils/toSlug";
 
 moment.locale("vi");
 export interface blogCard {

@@ -1,6 +1,6 @@
 import { Col, Row } from "antd";
 import { useEffect, useState } from "react";
-import { categoryTranslate } from "../../assets/categoryTranslate";
+import { categoryTranslate } from "../../modules/utils/categoryTranslate";
 import ProductCard from "./ProductCard";
 import { productCategorySectionProps } from "./type";
 const ProductCategorySection = ({

@@ -21,38 +21,8 @@ const ProductCategorySection2 = ({ productList, sectionName, productsPerPage }: 
       <div className="section__top">
         <div className="section-name">{sectionName}</div>
         <div className="page">
-          {/* <button
-            type="button"
-            className="prev-page-button page-button"
-            onClick={() => setPage((page) => (page - 1 < 0 ? 0 : page - 1))}
-          >
-            {" "}
-            &lt; Trang trước{" "}
-          </button>
-          <div>
-            <input
-              className="page-number"
-              min="1"
-              max={`${productList.length / productPerPage}`}
-              type="number"
-              defaultValue={1}
-              value={page + 1}
-            />
-            <span>/ {Math.ceil(productList.length / productPerPage)}</span>
-          </div>
-          <button
-            type="button"
-            className="next-page-button page-button"
-            onClick={() =>
-              setPage((page) =>
-                page + 1 > Math.floor(productList.length / productPerPage)
-                  ? Math.floor(productList.length / productPerPage)
-                  : page + 1
-              )
-            }
-          >
-            Trang sau &gt;
-          </button> */}
+
+
           <Pagination
             defaultCurrent={page + 1}
             total={productList.length}
@@ -63,8 +33,8 @@ const ProductCategorySection2 = ({ productList, sectionName, productsPerPage }: 
               <Button
                 className={`${type}-page-button page-button`}
               >
-                {(type == 'next') && 'Trang sau'}
-                {(type == 'prev') && 'Trang trước'}
+                {(type === 'next') && 'Trang sau'}
+                {(type === 'prev') && 'Trang trước'}
               </Button>
             )}
             onChange={handlPageChange}

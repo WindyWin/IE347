@@ -3,7 +3,10 @@
     &:hover,
     &:focus,
     &:active {
-        border: $yellow-color !important;
-        background-color: $yellow-color !important;
+        background-color: $brown-color-hover !important;
+        border-color: unset !important;
+
+
+
     }
 }

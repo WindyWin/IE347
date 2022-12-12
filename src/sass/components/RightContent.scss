@@ -230,7 +230,7 @@
   left: 390px;
 
   button {
-    border: 2px solid #ab602b;
+    border: 2px solid $brown-color;
     border-radius: 15px;
     height: 48px;
     font-size: 20px;
@@ -239,12 +239,12 @@
 
   button:first-child {
     background-color: white;
-    color: #ab602b;
+    color: $brown-color;
   }
 
   button:last-child {
     margin-left: 30px;
-    background-color: #ab602b;
+    background-color: $brown-color;
     color: white;
   }
 
@@ -254,7 +254,7 @@
   button:active,
   button:focus {
     outline: none;
-    border: 2px solid #ab602b;
+    border: 2px solid $brown-color;
     border-radius: 15px;
   }
 }
@@ -279,7 +279,7 @@
   .Header {
     font-size: 20px;
     margin-bottom: 30px;
-    color: #a25016;
+    color: $brown-color;
     font-weight: bold;
     width: fit-content;
     text-align: center;
@@ -292,13 +292,13 @@
   }
 
   button {
-    border: 2px solid #ab602b;
+    border: 2px solid $brown-color;
     border-radius: 15px;
     height: 48px;
     font-size: 20px;
     font-weight: 500;
     background-color: white;
-    color: #ab602b;
+    color: $brown-color;
     width: 256px;
     margin-left: 500px;
     margin-top: 80px;
@@ -310,8 +310,8 @@
   button:active,
   button:focus {
     outline: none;
-    border: 2px solid #ab602b;
+    border: 2px solid $brown-color;
     border-radius: 15px;
-    color: #ab602b;
+    color: $brown-color;
   }
 }
