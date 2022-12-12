@@ -1,10 +1,15 @@
+import benhVien from "../../assets/images/benh-vien.jpg";
+import catTia from "../../assets/images/cat-tia.jpg";
+import datHen from "../../assets/images/dat-hen.jpg";
+import spa from "../../assets/images/spa.png";
+import trongGiu from "../../assets/images/trong-giu.jpg";
 import { content } from "./Service";
 export const Content: content[] = [
   {
     path: "cat-tia",
     className: "main-service-imgLeft",
     img: {
-      src: "https://cdn.senshop.tech/cat-tia.jpg",
+      src: catTia,
       alt: "Cắt tỉa",
     },
     content: {
@@ -16,7 +21,7 @@ export const Content: content[] = [
     path: "trong-giu",
     className: "main-service-imgRight",
     img: {
-      src: "https://cdn.senshop.tech/trong-giu.jpg",
+      src: trongGiu,
       alt: "Trông giữ thú cưng",
     },
     content: {
@@ -28,7 +33,7 @@ export const Content: content[] = [
     path: "spa",
     className: "main-service-imgLeft",
     img: {
-      src: "https://cdn.senshop.tech/spa.png",
+      src: spa,
       alt: "Spa",
     },
     content: {
@@ -40,7 +45,7 @@ export const Content: content[] = [
     path: "benh-vien-thu-y",
     className: "main-service-imgRight",
     img: {
-      src: "https://cdn.senshop.tech/thu-y.jpg",
+      src: benhVien,
       alt: "Bệnh viện thú y",
     },
     content: {
@@ -52,7 +57,7 @@ export const Content: content[] = [
     path: "dat-hen",
     className: "main-service-imgLeft",
     img: {
-      src: "https://cdn.senshop.tech/dat-hen-dich-vu.jpg",
+      src: datHen,
       alt: "Đặt hẹn",
     },
     content: {

@@ -11,8 +11,8 @@ export interface product {
   categories: string[];
 }
 export interface Variant {
-  size: string[];
-  color: string[];
+  size: string[] | never[];
+  color: string[] | never[];
 }
 interface Image {
   url: string;
@@ -20,6 +20,7 @@ interface Image {
   author?: string;
 }
 export interface productDetail {
+  _id: string;
   name: string; //
   price: number; //
   stock: number; //
@@ -29,8 +30,7 @@ export interface productDetail {
   variant?: Variant; //
   images: Image[]; //
   categories: string[]; //
-  _id: string;
-  comments: [];
+  comments: comment[]; //
 }
 export interface commentAuthor {
   _id: string;

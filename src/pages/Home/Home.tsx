@@ -3,11 +3,10 @@ import { Helmet } from "react-helmet";
 import { ProductCategorySection } from "../../components/core";
 import Loader from "../../components/core/Loader";
 import { Contact, Reviews, Service, Slider } from "../../modules/Home";
-import { generateProductList } from "../../modules/utils/DataGenerate";
-
+import { getProductListByCategory } from "../../Service/ProductService";
 function Home() {
-  const pet = generateProductList(8);
-  const food = generateProductList(8);
+  const pet = getProductListByCategory("thucung");
+  const food = getProductListByCategory("thucanthucung");
   return (
     <>
       <Helmet>
