@@ -43,46 +43,26 @@ function Intro() {
           <Row gutter={[48, 48]}>
             <Col xs={24} sm={12} lg={8}>
               <IntroMember
-                nameMember="NGUYỄN NHỰT HÀO"
+                nameMember="NGUYỄN VĂN A"
                 posMember="NHÀ PHÁT TRIỂN"
                 srcImg={avatar}
               />
             </Col>
             <Col xs={24} sm={12} lg={8}>
               <IntroMember
-                nameMember="TRẦN PHAN HẢI ĐĂNG"
+                nameMember="NGUYỄN VĂN B"
                 posMember="NHÀ PHÁT TRIỂN"
                 srcImg={avatar}
               />
             </Col>
             <Col xs={24} sm={12} lg={8}>
               <IntroMember
-                nameMember="NGUYỄN HỮU TÂM"
+                nameMember="NGUYỄN VĂN C"
                 posMember="NHÀ PHÁT TRIỂN"
                 srcImg={avatar}
               />
             </Col>
-            <Col xs={24} sm={12} lg={8}>
-              <IntroMember
-                nameMember="NGUYỄN ĐĂNG ĐỊNH"
-                posMember="NHÀ PHÁT TRIỂN"
-                srcImg={avatar}
-              />
-            </Col>
-            <Col xs={24} sm={12} lg={8}>
-              <IntroMember
-                nameMember="TRẦN HỮU TÌNH"
-                posMember="NHÀ PHÁT TRIỂN"
-                srcImg={avatar}
-              />
-            </Col>
-            <Col xs={24} sm={12} lg={8}>
-              <IntroMember
-                nameMember="PHẠM KIM CHIẾN"
-                posMember="NHÀ PHÁT TRIỂN"
-                srcImg={avatar}
-              />
-            </Col>
+
           </Row>
         </div>
       </section>

@@ -1,6 +1,15 @@
-
-.hidden{
+.hidden {
     display: none;
 }
 
+li {
+    list-style: none;
+}
 
+a {
+    color: $black-color;
+
+    :hover {
+        color: $black-color;
+    }
+}

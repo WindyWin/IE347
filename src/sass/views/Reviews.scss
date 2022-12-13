@@ -3,18 +3,21 @@
   padding: 50px;
   font-size: 17px;
 }
-.content > p {
+
+.content>p {
   grid-column: 1/4;
   font-size: 40px;
   font-weight: bold;
   text-align: center;
 }
+
 #image1,
 #image2,
 #image3 {
   left: 50%;
   transform: translate(-50%, 0);
 }
+
 #image1 {
   background-color: #ffffff;
   width: 394px;
@@ -23,7 +26,7 @@
   z-index: 0;
 }
 
-#image1 > svg {
+#image1>svg {
   position: absolute;
   top: 180px;
   left: 27px;
@@ -32,7 +35,8 @@
   stroke: #ffffff;
   stroke-width: 2;
 }
-#image1 > p {
+
+#image1>p {
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
@@ -41,11 +45,13 @@
   text-align: center;
   padding: 10px 0;
 }
+
 #title1 {
   color: #e95298;
   font-size: 24px;
   font-weight: bold;
 }
+
 #footprint1 {
   position: relative;
 
@@ -61,7 +67,7 @@
   z-index: 0;
 }
 
-#image2 > svg {
+#image2>svg {
   position: absolute;
   top: 180px;
   left: 27px;
@@ -70,7 +76,8 @@
   stroke: #ffffff;
   stroke-width: 2;
 }
-#image2 > p {
+
+#image2>p {
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
@@ -79,11 +86,13 @@
   text-align: center;
   padding: 10px 0;
 }
+
 #title2 {
-  color: #f3cf7a;
+  color: $yellow-color;
   font-size: 24px;
   font-weight: bold;
 }
+
 #footprint2 {
   position: relative;
 
@@ -99,7 +108,7 @@
   z-index: 0;
 }
 
-#image3 > svg {
+#image3>svg {
   position: absolute;
   top: 180px;
   left: 27px;
@@ -108,7 +117,8 @@
   stroke: #ffffff;
   stroke-width: 2;
 }
-#image3 > p {
+
+#image3>p {
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
@@ -117,11 +127,13 @@
   text-align: center;
   padding: 10px 0;
 }
+
 #title3 {
   color: #e95298;
   font-size: 24px;
   font-weight: bold;
 }
+
 #footprint3 {
   position: relative;
 

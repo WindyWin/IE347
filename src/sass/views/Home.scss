@@ -159,7 +159,7 @@
 
     .ant-input:first-child {
       font-size: 16px;
-      border-color: #f3cf7a;
+      border-color: $yellow-color;
       height: 45px;
     }
 
@@ -183,8 +183,8 @@
 
   Button {
     height: 45px;
-    background-color: $yellow-color;
-    border-color: $yellow-color;
+    background-color: $orange-color;
+    border-color: $orange-color;
   }
 
   .header__right {
@@ -194,7 +194,7 @@
       width: 50px;
       height: 50px;
       border-style: dashed;
-      border-color: #f3cf7a;
+      border-color: $yellow-color;
       border-radius: 30px;
       background-color: #ffff;
       cursor: pointer;
@@ -256,7 +256,7 @@
 
     .ant-input:first-child {
       font-size: 16px;
-      border-color: #f3cf7a;
+      border-color: $yellow-color;
       height: 40px;
     }
 
@@ -275,8 +275,8 @@
 
     Button {
       height: 40px;
-      background-color: $yellow-color;
-      border-color: $yellow-color;
+      background-color: $orange-color;
+      border-color: $orange-color;
     }
   }
 
@@ -564,7 +564,7 @@
     width: 30%;
     padding: 20px;
     padding-bottom: 5px;
-    background-color: $yellow-color;
+    background-color: $orange-color;
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
     color: white;
@@ -656,7 +656,7 @@
     position: relative;
 
     .active {
-      background-color: $yellow-bold-color;
+      background-color: $orange-color-2;
       color: #fff;
     }
 
@@ -677,7 +677,7 @@
     }
 
     li:hover {
-      background-color: $yellow-bold-color;
+      background-color: $orange-color-2;
       color: #fff;
     }
   }

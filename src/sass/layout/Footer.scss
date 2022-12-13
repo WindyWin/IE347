@@ -2,19 +2,23 @@
   font-weight: bold;
   width: 100%;
 
-  p {
-    font-size: 18px;
+  p,
+  li {
+    font-size: 16px;
     margin-bottom: 0px;
+    color: $black-color;
+
+    a {
+      margin-left: 10px;
+    }
   }
 
   .footer-content {
-    background-color: #f3cf7a;
+    background-color: $yellow-color;
     padding: 20px 20px;
 
     #content-3 {
-      display: flex;
-      align-content: center;
-      justify-content: center;
+      @include flex-center;
 
       img {
         margin-right: 10px;
@@ -33,9 +37,7 @@
 
     .footer-left-content {
       .logo-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-center;
       }
 
       >p {

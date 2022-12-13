@@ -3,21 +3,17 @@
 
   .blog-category-header {
     width: 100%;
-    background-color: #f3cf7a;
+    background-color: $yellow-color;
     color: $black-color;
     font-size: 1.5rem;
     font-weight: bold;
     height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     margin-bottom: 20px;
 
     .category-list {
       list-style: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center;
       gap: 2rem;
       margin: 0;
 

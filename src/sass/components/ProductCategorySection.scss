@@ -30,7 +30,7 @@
       .page-button {
         font-size: 1rem;
         color: #333;
-        background-color: $yellow-color;
+        background-color: $orange-color;
         border: none;
         padding: 0rem 1.5rem 0.3rem;
         border-radius: 1rem;
@@ -48,7 +48,7 @@
       content: "";
       width: 230px;
       height: 6px;
-      background-color: $yellow-color;
+      background-color: $orange-color;
       position: absolute;
       bottom: 0px;
       left: 0px;
@@ -75,7 +75,7 @@
 
     .product-category:hover,
     .active {
-      background-color: $yellow-color;
+      background-color: $orange-color;
       color: rgb(0, 0, 0);
     }
 

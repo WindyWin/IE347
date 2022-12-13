@@ -43,7 +43,7 @@
       .page-button {
         font-size: 1rem;
         color: #333;
-        background-color: $yellow-color;
+        background-color: $orange-color;
         border: none;
         border-radius: 1rem;
         font-weight: bold;
@@ -85,7 +85,7 @@
 
     .product-category:hover,
     .active {
-      background-color: $yellow-color;
+      background-color: $orange-color;
       color: rgb(0, 0, 0);
     }
   }

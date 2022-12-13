@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { MemberProps } from "./type";
 
 const IntroMember: FC<MemberProps> = ({ nameMember, posMember, srcImg }) => {

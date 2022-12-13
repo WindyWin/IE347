@@ -20,7 +20,7 @@ function Contact() {
   };
 
   return (
-    <div className="home--contact">
+    <div className="home--contact" id="contact-form">
       <img
         src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?crop=entropy&cs=srgb&fm=jpg&ixid=Mnw3MjAxN3wwfDF8c2VhcmNofDF8fGNhdHxlbnwwfHx8fDE2NDg5ODE3MjA&ixlib=rb-1.2.1&q=85&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450"
         alt="Cat"

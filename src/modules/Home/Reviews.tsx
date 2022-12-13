@@ -8,7 +8,7 @@ function Reviews() {
                 <Col xl={8} lg={8} md={12} xs={24}>
                     <div id="image1">
                         <img src={require("./Assets/Mision-min-1.png")} alt="image 1" />
-                        <p id="title1">Thầy ông nội</p>
+                        <p id="title1">Nguyễn Văn A</p>
                         <svg height="100" width="340">
                             <ellipse cx="170" cy="50" rx="170" ry="50" />
                             Sorry, your browser does not support inline SVG.
@@ -23,7 +23,7 @@ function Reviews() {
                 <Col xl={8} lg={8} md={12} xs={24}>
                     <div id="image2">
                         <img src={require("./Assets/Mision-min-2.png")} alt="mission 2" />
-                        <p id="title2">Bé Bo</p>
+                        <p id="title2">Nguyễn Văn A</p>
                         <svg height="100" width="340">
                             <ellipse cx="170" cy="50" rx="170" ry="50" />
                             Sorry, your browser does not support inline SVG.
@@ -38,7 +38,7 @@ function Reviews() {
                 <Col xl={8} lg={8} md={12} xs={24}>
                     <div id="image3">
                         <img src={require("./Assets/Mision-min-3.png")} alt="mission 3" />
-                        <p id="title3">Phương Hằng</p>
+                        <p id="title3">Nguyễn Văn A</p>
                         <svg height="100" width="340">
                             <ellipse cx="170" cy="50" rx="170" ry="50" />
                             Sorry, your browser does not support inline SVG.

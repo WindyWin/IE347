@@ -1,12 +1,11 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Helmet } from "react-helmet";
 import { ProductCategorySection } from "../../components/core";
-import Loader from "../../components/core/Loader";
 import { Contact, Reviews, Service, Slider } from "../../modules/Home";
 import { getProductListByCategory } from "../../Service/ProductService";
 function Home() {
-  const pet = getProductListByCategory("thucung");
-  const food = getProductListByCategory("thucanthucung");
+  const pet = useRef(getProductListByCategory("thucung"));
+  const food = useRef(getProductListByCategory("thucanthucung"));
   return (
     <>
       <Helmet>
@@ -40,7 +39,7 @@ function Home() {
         <Loader />
       ) : ( */}
       <ProductCategorySection
-        productList={pet}
+        productList={pet.current}
         categoryList={[
           "Chó cảnh",
           "Mèo cảnh",
@@ -56,7 +55,7 @@ function Home() {
         <Loader />
       ) : ( */}
       <ProductCategorySection
-        productList={food}
+        productList={food.current}
         categoryList={["Thức ăn cho chó", "Thức ăn cho mèo", "Thức ăn khác"]}
         sectionName="Thức ăn cho thú cưng"
       />

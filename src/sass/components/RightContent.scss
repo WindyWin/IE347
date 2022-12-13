@@ -99,13 +99,13 @@
   padding: 0px 70px;
 
   .ant-input {
-    border: 1px solid $yellow-color;
+    border: 1px solid $orange-color;
   }
 
   .ant-input:hover,
   .ant-input:focus,
   .ant-input:active {
-    border: 1px solid $yellow-color;
+    border: 1px solid $orange-color;
     outline: none;
   }
 
@@ -115,7 +115,7 @@
   }
 
   .ant-input-group-addon {
-    border: 1px solid $yellow-color;
+    border: 1px solid $orange-color;
     background-color: white;
   }
 }
@@ -129,7 +129,7 @@
 
       .ant-btn-icon-only:focus,
       ant-btn-icon-only:hover {
-        color: $yellow-color;
+        color: $orange-color;
         background: transparent;
       }
 
@@ -143,7 +143,7 @@
       font-weight: 500;
 
       span {
-        color: $yellow-color;
+        color: $orange-color;
         font-weight: 500;
       }
 
@@ -186,7 +186,7 @@
   text-align: center;
 
   span {
-    color: $yellow-color;
+    color: $orange-color;
   }
 
   tr {
@@ -200,7 +200,7 @@
 
 .ant-select {
   .ant-select-selector {
-    border-color: $yellow-color !important;
+    border-color: $orange-color !important;
     text-align: left;
   }
 
@@ -268,7 +268,7 @@
 
   .DetailTotal {
     .fontBold {
-      color: $yellow-color;
+      color: $orange-color;
     }
   }
 

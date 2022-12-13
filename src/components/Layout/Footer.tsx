@@ -1,4 +1,5 @@
 import { Col, Row } from "antd";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -28,9 +29,9 @@ function Footer() {
         <Col xl={6} lg={8} md={8} sm={24} xs={24} className="footer-center-content" >
           <p>Về chúng tôi</p>
           <ul>
-            <li>Giới thiệu</li>
-            <li>Liên hệ</li>
-            <li>Điều khoản</li>
+            <li><Link to="gioi-thieu">Giới thiệu</Link></li>
+            <li><Link to="/#contact-form">Liên hệ</Link></li>
+            <li><Link to="/">Điều khoản</Link></li>
           </ul>
           <p>Theo dõi</p>
           <div>
