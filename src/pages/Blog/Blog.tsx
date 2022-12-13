@@ -1,5 +1,10 @@
+import { useRef } from "react";
 import { Helmet } from "react-helmet";
+import { getAllBlogs, getBlogCategories } from "../../Service/BlogService";
+import { BlogCategory } from "./components";
 const Blog = () => {
+  const blogs = useRef(getAllBlogs());
+  const categories = useRef(getBlogCategories());
   return (
     <>
       <Helmet>
@@ -21,17 +26,9 @@ const Blog = () => {
           content="Những bài viết nổi bật, những kiến thức bổ ích mà nhiều người có thể chưa biết. Chúng tôi đem đến cho các bạn những bài viết về thú cưng, cách chăm sóc thú cưng cũng như một số kỹ năng nuôi thú cưng để các bạn có thể dễ dàng hơn."
         />
       </Helmet>
-      {/* {blogs.loading ? (
-        <Loader />
-      ) : (
-        <>
-          {blogs.error ? (
-            <Content404 />
-          ) : (
-            <BlogCategory blogList={blogs.data.getAllBlogs} categoryList={[]} />
-          )}
-        </>
-      )} */}
+
+      <BlogCategory blogList={blogs.current} categoryList={categories.current} />
+
     </>
   );
 };

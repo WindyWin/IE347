@@ -1,16 +1,18 @@
-import BlogCard, {blogCard} from './BlogCard';
+import { blogCard } from '../../../components/core/type';
+import BlogCard from './BlogCard';
 
-interface blogListProps{
+
+interface blogListProps {
     name: string;
     blogList: blogCard[];
 }
 
-const BlogSideCardList = ({name,blogList} : blogListProps) => {
-    
+const BlogSideCardList = ({ name, blogList }: blogListProps) => {
+
     return (<div className="blog-side-bar">
         <h4>{name}</h4>
         <div className="blog-side-bar__list">
-            {blogList.map((blog,index) => <BlogCard key={index} blog={blog} type="small" />)}
+            {blogList.map((blog, index) => <BlogCard key={index} blog={blog} type="small" />)}
         </div>
     </div>)
 }

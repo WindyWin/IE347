@@ -1,6 +1,8 @@
 import { Col, Pagination, Row } from "antd";
 import { useState } from "react";
-import BlogCard, { blogCard } from "./BlogCard";
+import { blogCard } from "../../../components/core/type";
+import BlogCard from "./BlogCard";
+
 import BlogSideCardList from "./BlogSideCardList";
 
 interface blogCategoryProps {

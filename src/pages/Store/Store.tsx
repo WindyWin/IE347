@@ -1,11 +1,9 @@
 import { Col, Row } from "antd";
-import React from "react";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 import { Category, ProductCategorySection2 } from "../../components/core";
-import Loader from "../../components/core/Loader";
 import { categoryTranslate } from "../../modules/utils/categoryTranslate";
-
+import { getAllProduct } from "../../Service/ProductService";
 function Store() {
   const location = useLocation();
   const pathName = location.pathname.split("/");
@@ -13,7 +11,7 @@ function Store() {
   const path = pathName.map((path) => {
     return path.split("-").join("");
   });
-
+  const allProduct = getAllProduct();
 
   return (
     <>
@@ -68,16 +66,14 @@ function Store() {
             lg={19}
             xl={19}
           >
-            {/* {loading ? (
-              <Loader />
-            ) : (
-              <ProductCategorySection2
-                productList={data.getAllProductsByCategory}
-                sectionName={
-                  categoryTranslate(path[path.length - 1])?.name ?? ""
-                }
-              />
-            )} */}
+
+            <ProductCategorySection2
+              productList={allProduct}
+              sectionName={
+                categoryTranslate(path[path.length - 1])?.name ?? ""
+              }
+            />
+
           </Col>
         </Row>
       </div>

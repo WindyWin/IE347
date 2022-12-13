@@ -82,3 +82,17 @@ export interface blog {
   };
   content: string;
 }
+export interface blogCard {
+  title: string;
+  like: string[];
+  comments: any;
+  share: number;
+  description?: string;
+  category?: string;
+  image: {
+    url: string;
+  };
+  _id: string;
+  author: string;
+  date: Date;
+}

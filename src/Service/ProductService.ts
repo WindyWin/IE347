@@ -18,6 +18,23 @@ export const getProductDetail = (slug: string): productDetail => {
     };
 }
 
+export const getAllProduct = (): product[] => {
+    const productList: product[] = productData.map(
+        product => ({
+            _id: product._id,
+            name: product.name,
+            description: product.description,
+            stock: product.stock,
+            price: product.price,
+            salePrice: product.salePrice,
+            variant: product.variant,
+            images: product.images,
+            categories: product.categories,
+            comments: product.comments,
+        })
+    );
+    return productList;
+}
 export const getProductListByCategory = (category: string): product[] => {
     const productList = productData
         .filter(product => product.categories.includes(category))

@@ -47,13 +47,19 @@ export const productData = productRawData.map(data => {
 })
 export const blogData = blogRawData.map(data => {
     return {
-        ...data,
         _id: faker.database.mongodbObjectId(),
+        title: data.title,
+        like: data.like,
+        share: data.share,
+        description: data.description,
+        category: data.category,
+        author: data.author,
         //convert $date to moment
-        date: data.date["$date"],
+        date: new Date(data.date["$date"]),
         image: {
             url: faker.image.imageUrl(),
-        }
+        },
+        content: data.content,
     }
 })
 export const petCategory = ["thucung",

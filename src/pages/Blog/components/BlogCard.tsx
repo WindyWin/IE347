@@ -4,23 +4,11 @@ import { Link } from "react-router-dom";
 import {
   CommentIcon, LikeIcon, ShareIcon
 } from "../../../assets/icons/BlogCustomIcon";
+import { blogCard } from "../../../components/core/type";
 import toSlug from "../../../modules/utils/toSlug";
 
 moment.locale("vi");
-export interface blogCard {
-  title: string;
-  like: string[];
-  comments: any;
-  share: number;
-  description?: string;
-  category?: string;
-  image: {
-    url: string;
-  };
-  _id: string;
-  author: string;
-  date: Date;
-}
+
 export interface blogCardProps {
   type: "small" | "large";
   blog: blogCard;

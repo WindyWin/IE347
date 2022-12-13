@@ -11,7 +11,7 @@ import {
 import momment from "moment";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import banner from "../../assets/images/profile-banner.jpg";
 momment.locale("vi");
 
 const prefixSelector = (
@@ -123,7 +123,7 @@ const Profile = () => {
       <div className="profile-wallpaper">
         <img
           style={{ width: "100%" }}
-          src="https://cdn.senshop.tech/Banner/profile-banner.webp"
+          src={banner}
           alt="banner"
         />
       </div>
