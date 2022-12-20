@@ -1,9 +1,9 @@
 import { RouterInterface } from "../../router/type";
 import { AdminBill, AdminBlog, AdminProduct, AdminUser } from "../Admin";
 import AdminBooking from "./AdminBooking";
-import AdminChart from "./AdminChart";
 import AdminComment from "./AdminComment";
 import AdminContact from "./AdminContact";
+import AdminHome from "./AdminHome";
 
 const RouterAdminLayout: RouterInterface[] = [
   {
@@ -63,12 +63,12 @@ const RouterAdminLayout: RouterInterface[] = [
     element: () => <AdminBill />,
   },
   {
-    name: "AdminChart",
-    path: "chart",
+    name: "AdminHome",
+    path: "home",
     index: true,
     public: true,
     children: [],
-    element: () => <AdminChart />,
+    element: () => <AdminHome />,
   }
 ];
 

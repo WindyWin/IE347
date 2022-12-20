@@ -1,5 +1,6 @@
 import { Drawer, Table } from "antd";
 import React, { useEffect, useState } from "react";
+import { getAllProduct } from "../../Service/ProductService";
 import AdminAddProduct from "./AdminAddProduct";
 import AdminContentHeader from "./AdminContentHeader";
 import { productColumn } from './type';
@@ -7,7 +8,7 @@ import { productColumn } from './type';
 function AdminProduct() {
   const title = "Product Management";
   const [searchValue, setSearchValue] = useState("");
-  const initialProduct: any[] | (() => any[]) = []
+  const initialProduct: any[] = getAllProduct();
   const [dataSource, setDataSource] = useState(initialProduct);
   const titleDrawer = "UPDATE PRODUCT";
 

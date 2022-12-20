@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import AdminContentHeader from "./AdminContentHeader";
 import AdminCreateUser from "./AdminCreateUser";
 
+// const userColumns = [
+
+
 function AdminUser() {
   const title = "User Management";
   const userData: any = [];
