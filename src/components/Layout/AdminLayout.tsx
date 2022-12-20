@@ -1,9 +1,7 @@
-import {
-  BarChartOutlined, BookOutlined, CodeSandboxOutlined, CommentOutlined, ContactsOutlined, FormOutlined, MenuFoldOutlined, MenuUnfoldOutlined, PayCircleOutlined, UserOutlined
-} from "@ant-design/icons";
+import { BookOutlined, CodeSandboxOutlined, CommentOutlined, ContactsOutlined, FormOutlined, HomeOutlined, MenuFoldOutlined, MenuUnfoldOutlined, PayCircleOutlined, UserOutlined } from "@ant-design/icons";
 import { Layout, Menu, message } from "antd";
 import React, { useEffect, useState } from "react";
-import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import AdminLogin from "../../modules/Admin/AdminLogin";
 
 function AdminLayout() {
@@ -55,6 +53,12 @@ function AdminLayout() {
   });
   const items = [
     {
+      key: "0",
+      icon: <HomeOutlined />,
+      label: "Home",
+      path: "home",
+    },
+    {
       key: "1",
       icon: <UserOutlined />,
       label: "User",
@@ -96,12 +100,7 @@ function AdminLayout() {
       label: "Bills",
       path: "bill",
     },
-    {
-      key: "8",
-      icon: <BarChartOutlined />,
-      label: "Chart",
-      path: "chart",
-    }
+
   ];
   return (
     <>
@@ -129,12 +128,12 @@ function AdminLayout() {
               style={{ width: "100%" }}
             />
           </div>
-          <Menu mode="inline" defaultSelectedKeys={["1"]}>
+          <Menu mode="inline" defaultSelectedKeys={["0"]}>
             {items.map((item) => {
               return (
                 <Menu.Item key={item.key} icon={item.icon}>
                   {item.label}
-                  <Link to={item.path} />
+                  <NavLink to={item.path} />
                 </Menu.Item>
               );
             })}
