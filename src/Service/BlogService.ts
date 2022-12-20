@@ -27,8 +27,24 @@ export const getBlogbyCategory = (category: string): blogCard[] => {
             }
         })
 }
-export const getAllBlogs = (): blogCard[] => {
-    return blogData.map((blog): blogCard => {
+export const getAllBlogs = (admin = false): any[] => {
+    if (!admin)
+        return blogData.map((blog): blogCard => {
+            return {
+                title: blog.title,
+                like: blog.like,
+                comments: ["", "", ""],
+                share: blog.share,
+                description: blog.description,
+                category: blog.category,
+                image: blog.image,
+                _id: blog._id,
+                author: blog.author,
+                date: blog.date,
+            }
+        }
+        )
+    return blogData.map((blog): any => {
         return {
             title: blog.title,
             like: blog.like,
@@ -40,10 +56,11 @@ export const getAllBlogs = (): blogCard[] => {
             _id: blog._id,
             author: blog.author,
             date: blog.date,
+            content: blog.content,
         }
-    }
-    )
+    })
 }
+
 export const getBlogBySlugName = (slugName: string): blog => {
     const blog = blogData.find((blog) => toSlug(blog.title) === slugName);
     if (!blog)

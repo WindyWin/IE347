@@ -18,7 +18,7 @@ export const getProductDetail = (slug: string): productDetail => {
     };
 }
 
-export const getAllProduct = (): product[] => {
+export const getAllProduct = (): any[] => {
     const productList: product[] = productData.map(
         product => ({
             _id: product._id,
@@ -31,9 +31,9 @@ export const getAllProduct = (): product[] => {
             images: product.images,
             categories: product.categories,
             comments: product.comments,
-        })
-    );
+        }));
     return productList;
+
 }
 export const getProductListByCategory = (category: string): product[] => {
     const productList = productData
