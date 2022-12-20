@@ -1,12 +1,13 @@
 import { Drawer, Table } from "antd";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { getAllBlogs } from "../../Service/BlogService";
 import AdminAddBlog from "./AdminAddBlog";
 import AdminContentHeader from "./AdminContentHeader";
 import { blogColumns } from "./type";
 
 function AdminBlog() {
   const title = "Blog Management";
-  const initialValues: any[] = [];
+  const initialValues: any[] = getAllBlogs(true);
   const [dataSource, setDataSource] = useState(initialValues);
   const [searchValue, setSearchValue] = useState("");
 
@@ -34,6 +35,7 @@ function AdminBlog() {
   const [contentDrawer, setContentDrawer] = useState(<></>);
   const showDrawer = (record: { id: number }) => {
     setVisible(true);
+
     setContentDrawer(
       <AdminAddBlog visibleProp={setVisible} dataProp={record} />
     );
