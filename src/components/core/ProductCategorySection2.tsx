@@ -1,5 +1,5 @@
 import { Col, Pagination, Row, Select } from "antd";
-import { useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { categoryTranslate } from "../../modules/utils/categoryTranslate";
 import ProductCard from "./ProductCard";
 import { product } from "./type";
@@ -19,9 +19,16 @@ const sortFunction = {
 const ProductCategorySection2 = ({ productList, sectionName, productsPerPage }: Props) => {
   const [page, setPage] = useState<number>(0);
   const [productPerPage, setProductPerPage] = useState<number>(productsPerPage ?? 8);
-  const [products, setProducts] = useState<product[]>(productList.filter((item) => item.categories.includes(categoryTranslate(sectionName)?.dbName ?? "")))
-
+  // const [products, setProducts] = useState<product[]>([])
   const [sortType, setSortType] = useState<string>('asc-price');
+  const products = productList
+    .filter((item) => item.categories.includes(categoryTranslate(sectionName)?.dbName ?? ""))
+
+
+  // useEffect(() => {
+  //   setProducts(productList
+  //     )
+  // }, [products, sectionName, productList])
 
   function handlPageChange(page: number, pageSize: number) {
     setPage(page - 1);
@@ -76,6 +83,7 @@ const ProductCategorySection2 = ({ productList, sectionName, productsPerPage }: 
       <div className="section__bottom">
         <Row gutter={[16, 16]}>
           {products
+            // .filter((item) => item.categories.includes(categoryTranslate(sectionName)?.dbName ?? ""))
             .slice(page * productPerPage, (page + 1) * productPerPage)
             .sort(sortFunction[sortType as keyof typeof sortFunction])
             .map((item) => {
@@ -92,4 +100,4 @@ const ProductCategorySection2 = ({ productList, sectionName, productsPerPage }: 
   );
 };
 
-export default ProductCategorySection2;
+export default memo(ProductCategorySection2);
