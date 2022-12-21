@@ -9,6 +9,7 @@ import { Link, useParams } from "react-router-dom";
 // 
 import { RelatedProduct } from "../../modules/Detail/Data";
 import { categoryTranslate } from "../../modules/utils/categoryTranslate";
+import { commentGenerator } from "../../modules/utils/DataGenerate";
 import Comment from "./Comment";
 import CommentEditor from "./CommentEditor";
 import Loader from "./Loader";
@@ -308,18 +309,13 @@ const ProdcutDetail = ({ product }: ProductDetailProps) => {
             </Tabs.TabPane>
             <Tabs.TabPane key="2" tab="Đánh giá">
               <div id="comment" className="comment-section">
-                {/* <CommentEditor idProduct={product._id} />
-                {loading ? (
-                  <Loader />
-                ) : error ? (
-                  "Có lỗi xảy ra"
-                ) : (
-                  <div className="comment-list">
-                    {data.getCommentsByProductID.map((comment: comment) => (
-                      <Comment key={comment._id} comment={comment} />
-                    ))}
-                  </div>
-                )} */}
+                <CommentEditor idProduct={product._id} />
+
+                <div className="comment-list">
+                  {commentGenerator(4).map((comment: comment) => (
+                    <Comment key={comment._id} comment={comment} />
+                  ))}
+                </div>
               </div>
             </Tabs.TabPane>
           </Tabs>
