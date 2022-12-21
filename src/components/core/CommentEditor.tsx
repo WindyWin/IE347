@@ -32,15 +32,16 @@ const CommentEditor = ({ idProduct, idBlog }: any) => {
           }
           {...(!isAuthenticated ? { trigger: "hover" } : { visible: false })}
         >
-          <Button
-            htmlType="submit"
-            disabled={!isAuthenticated}
-            loading={loading}
-            type="primary"
-          >
-            Gửi bình luận
-          </Button>
+          
         </Popover> */}
+        <Button
+          htmlType="submit"
+          // disabled={!isAuthenticated}
+          // loading={loading}
+          type="primary"
+        >
+          Gửi bình luận
+        </Button>
       </Form.Item>
     </Form>
   );
