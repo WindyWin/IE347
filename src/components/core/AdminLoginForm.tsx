@@ -1,7 +1,7 @@
 import { Button, Checkbox, Form, Input, message } from "antd";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import logo from "../../assets/images/logo.png";
 function AdminLoginForm() {
 
   const navigate = useNavigate();
@@ -45,7 +45,7 @@ function AdminLoginForm() {
       >
         <Form.Item name="logo">
           <img
-            src="https://senshop.tech/static/media/logo.bc588d992055212e8997a878ac242940.svg"
+            src={logo}
             alt="logo"
             className="admin_logo"
             style={{ width: "80%", position: "relative", left: "50%" }}
