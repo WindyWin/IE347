@@ -1,7 +1,7 @@
 import { BookOutlined, CodeSandboxOutlined, CommentOutlined, ContactsOutlined, FormOutlined, HomeOutlined, MenuFoldOutlined, MenuUnfoldOutlined, PayCircleOutlined, UserOutlined } from "@ant-design/icons";
-import { Layout, Menu, message } from "antd";
+import { Layout, Menu } from "antd";
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import AdminLogin from "../../modules/Admin/AdminLogin";
 
 function AdminLayout() {
@@ -87,6 +87,7 @@ function AdminLayout() {
       icon: <ContactsOutlined />,
       label: "Contacts",
       path: "contacts",
+
     },
     {
       key: "6",
@@ -160,6 +161,7 @@ function AdminLayout() {
             )}
             Welcome to Admin!
             <AdminLogin />
+
           </Header>
           <Content
             className="site-layout-background"
