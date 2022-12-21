@@ -79,7 +79,7 @@ export const categoryTranslate = (category: string) => {
 
     case "thucanthucung":
     case "thuc-an-thu-cung":
-    case "Thú cảnh thú cưng":
+    case "Thức ăn thú cưng":
       return {
         name: "Thức ăn thú cưng",
         slugName: "thuc-an-thu-cung",
@@ -159,7 +159,7 @@ export const categoryTranslate = (category: string) => {
     case "do-choi-thu-cung":
     case "Đồ chơi thú cưng":
       return {
-        name: "Đồ cho thú cưng",
+        name: "Đồ chơi thú cưng",
         slugName: "do-choi-thu-cung",
         dbName: "dochoithucung",
         title: "Đồ chơi thú cưng Sen Shop",
