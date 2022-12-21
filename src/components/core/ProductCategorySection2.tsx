@@ -1,5 +1,6 @@
-import { Button, Col, Pagination, Row, Select } from "antd";
+import { Col, Pagination, Row, Select } from "antd";
 import { useState } from "react";
+import { categoryTranslate } from "../../modules/utils/categoryTranslate";
 import ProductCard from "./ProductCard";
 import { product } from "./type";
 
@@ -8,16 +9,25 @@ interface Props {
   sectionName: string;
   productsPerPage?: number
 }
+const sortFunction = {
+  'asc-price': (a: product, b: product) => a.price - b.price,
+  'desc-price': (a: product, b: product) => b.price - a.price,
+  'asc-name': (a: product, b: product) => a.name.localeCompare(b.name),
+  'desc-name': (a: product, b: product) => b.name.localeCompare(a.name),
+}
 
 const ProductCategorySection2 = ({ productList, sectionName, productsPerPage }: Props) => {
   const [page, setPage] = useState<number>(0);
   const [productPerPage, setProductPerPage] = useState<number>(productsPerPage ?? 8);
+  const [products, setProducts] = useState<product[]>(productList.filter((item) => item.categories.includes(categoryTranslate(sectionName)?.dbName ?? "")))
+
+  const [sortType, setSortType] = useState<string>('asc-price');
 
   function handlPageChange(page: number, pageSize: number) {
     setPage(page - 1);
   }
   function handleSortChange(value: string) {
-    console.log(value);
+    setSortType(value);
   }
 
   return (
@@ -28,27 +38,36 @@ const ProductCategorySection2 = ({ productList, sectionName, productsPerPage }: 
         <div className="page">
 
           <Select
-            defaultValue="lucy"
-            style={{ width: 120 }}
+            defaultValue="asc-price"
+            style={{ width: 150 }}
             onChange={handleSortChange}
             options={[
               {
-                value: 'jack',
-                label: 'Sắp xếp theo giá',
+                value: 'asc-price',
+                label: 'Giá tăng dần',
               },
               {
-                value: 'lucy',
-                label: 'Lucy',
+                value: 'desc-price',
+                label: 'Giá giảm dần',
               },
               {
-                value: 'disabled',
+                value: 'asc-name',
+                label: 'Tên a-z',
+              },
+              {
+                value: 'desc-name',
+                label: 'Tên z-a',
+              },
+              {
+                value: 'asc-rating',
                 disabled: true,
-                label: 'Disabled',
+                label: 'Đánh giá tăng dần',
               },
               {
-                value: 'Yiminghe',
-                label: 'yiminghe',
-              },
+                value: 'desc-rating',
+                disabled: true,
+                label: 'Đánh giá giảm dần',
+              }
             ]}
           />
 
@@ -56,8 +75,9 @@ const ProductCategorySection2 = ({ productList, sectionName, productsPerPage }: 
       </div>
       <div className="section__bottom">
         <Row gutter={[16, 16]}>
-          {productList
+          {products
             .slice(page * productPerPage, (page + 1) * productPerPage)
+            .sort(sortFunction[sortType as keyof typeof sortFunction])
             .map((item) => {
               return (
                 <Col key={item._id} xl={6} lg={6} md={12} sm={12} xs={24}>
@@ -66,6 +86,7 @@ const ProductCategorySection2 = ({ productList, sectionName, productsPerPage }: 
               );
             })}
         </Row>
+        <Pagination className="pagination" current={page + 1} total={products.length} onChange={handlPageChange} defaultCurrent={1} pageSize={productPerPage}  ></Pagination>
       </div>
     </div>
   );
