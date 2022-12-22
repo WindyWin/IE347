@@ -151,15 +151,17 @@ function AdminLayout() {
               zIndex: "500",
             }}
           >
-            {React.createElement(
-              collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
-              {
-                style: { marginRight: "1%" },
-                className: "trigger",
-                onClick: onToggle,
-              }
-            )}
-            Welcome to Admin!
+            <div className="admin__header-left">
+              {React.createElement(
+                collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+                {
+                  // style: { marginRight: "1%" },
+                  className: "trigger",
+                  onClick: onToggle,
+                }
+              )}
+              <span>Welcome to Admin!</span>
+            </div>
             <AdminLogin />
 
           </Header>
