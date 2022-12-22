@@ -55,7 +55,7 @@ export const getAllBlogs = (admin = false): any[] => {
             image: blog.image,
             _id: blog._id,
             author: blog.author,
-            date: blog.date,
+            date: blog.date.toUTCString(),
             content: blog.content,
         }
     })
