@@ -10,7 +10,6 @@ import {
 } from "antd";
 import momment from "moment";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import banner from "../../assets/images/profile-banner.jpg";
 momment.locale("vi");
 
@@ -38,7 +37,7 @@ const { TabPane } = Tabs;
 
 
 const Profile = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
 
   const info = {
@@ -100,11 +99,11 @@ const Profile = () => {
     updatedData.numberPhone = String(value.phoneNumber)
     updatedData.password = String(value.password)
 
-    const datainput = {
-      username: updatedData.username,
-      password: updatedData.password,
-      email: updatedData.email
-    }
+    // const datainput = {
+    //   username: updatedData.username,
+    //   password: updatedData.password,
+    //   email: updatedData.email
+    // }
 
 
 
