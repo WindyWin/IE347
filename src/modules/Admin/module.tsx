@@ -7,6 +7,14 @@ import AdminHome from "./AdminHome";
 
 const RouterAdminLayout: RouterInterface[] = [
   {
+    name: "AdminHome",
+    path: "",
+    index: true,
+    public: true,
+    children: [],
+    element: () => <AdminHome />,
+  },
+  {
     name: "AdminUser",
     path: "users",
     index: true,
