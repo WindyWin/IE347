@@ -36,7 +36,7 @@ export const productData = productRawData.map(data => {
         },
         images: data.images.map(image =>
         ({
-            url: faker.image.imageUrl(640, 480, "animals")
+            url: faker.image.imageUrl(640, 480, "cats")
         })),
         categories: data.categories,
         slug: data.slugName,
@@ -80,3 +80,17 @@ export const storeCategory = ["thucanthucung",
 
 
 
+export const usersData = (length: number) => {
+    const users: any[] = [];
+    for (let i = 0; i < length; i++) {
+        users.push({
+            _id: faker.database.mongodbObjectId(),
+            username: faker.internet.userName(),
+            email: faker.internet.email(),
+            avatar: faker.image.imageUrl(),
+            dateCreated: faker.date.past().toISOString(),
+            address: faker.address.streetAddress(),
+        });
+    }
+    return users;
+}
