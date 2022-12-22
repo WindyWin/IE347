@@ -4,12 +4,15 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { Link } from "react-router-dom";
 import { AddToCartIcon, SearchIcon } from "../../assets/icons/BlogCustomIcon";
+import useCart from "../../modules/Hook/useCart";
 import toSlug from "../../modules/utils/toSlug";
 import { productCardProps } from "./type";
 
 const ProductCard = ({ product }: productCardProps) => {
   const [viewHidden, setViewHidden] = useState(false);
+  const cart = useCart();
   const rating = useRef<number>(
+
     Math.round(
       (product.comments.reduce(
         (total, comment: any) => total + comment.rating,
@@ -27,7 +30,7 @@ const ProductCard = ({ product }: productCardProps) => {
     } else {
       productAddInfo?.classList.add("hidden");
     }
-  }, [viewHidden]);
+  }, [viewHidden, product.name]);
   function handelAddToCart(value: any) {
     if (product.stock <= 0) {
       message.warning("Sản phẩm đã được bán hết!");
@@ -41,26 +44,7 @@ const ProductCard = ({ product }: productCardProps) => {
         image: product.images[0],
         quantity: 1 /* i nop du chu ca mo */,
       };
-      let flag = false;
-      const localCarts = JSON.parse(
-        window.localStorage.getItem("products") as string
-      );
-      if (localCarts[0] === undefined) {
-        productCart.quantity--;
-        localCarts.push(productCart);
-      }
-      for (let i = 0; i < localCarts.length; i++) {
-        if (localCarts[i].name === productCart.name) {
-          localCarts[i].quantity++;
-          flag = true;
-          break;
-        }
-      }
-      if (!flag) {
-        localCarts.push(productCart);
-      }
-      window.localStorage.setItem("products", JSON.stringify(localCarts));
-      // setProducts(window.localStorage.getItem("products") as string);
+      cart.addToCart(productCart);
     }
     message.success("Thêm vào giỏ hàng thành công");
   }

@@ -4,14 +4,15 @@ import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 import cart from "../../assets/images/shoppingCart.svg";
+import useCart from "../../modules/Hook/useCart";
 import toSlug from "../../modules/utils/toSlug";
 const { Search } = Input;
 const { TabPane } = Tabs;
 const Header = () => {
   const navigate = useNavigate();
   let quantityProduct = useRef(0)
-
-
+  const cartHook = useCart();
+  let count = cartHook.getCartLength();
   const onSearch = (value: string) => {
     if (value) {
       sessionStorage.setItem("valueSearch", value);
@@ -52,7 +53,7 @@ const Header = () => {
         <div className="header__right">
           <Link to={"/gio-hang"}>
             <button className="shopping_cart">
-              <Badge count={quantityProduct.current} offset={[8, -5]}>
+              <Badge count={count} offset={[8, -5]}>
                 <img src={cart} alt="Giỏ hàng" />
               </Badge>
             </button>

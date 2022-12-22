@@ -1,19 +1,17 @@
 import {
   Button, Col, Form,
-  Image, InputNumber, message, Radio, Rate, Row, Tabs, Typography
+  Image, InputNumber, Radio, Rate, Row, Tabs, Typography
 } from "antd";
 import { decode } from "html-entities";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link, useParams } from "react-router-dom";
 // 
-import { RelatedProduct } from "../../modules/Detail/Data";
+import useCart from "../../modules/Hook/useCart";
 import { categoryTranslate } from "../../modules/utils/categoryTranslate";
 import { commentGenerator } from "../../modules/utils/DataGenerate";
 import Comment from "./Comment";
 import CommentEditor from "./CommentEditor";
-import Loader from "./Loader";
-import ProductCategorySection2 from "./ProductCategorySection2";
 import { comment, productDetail } from "./type";
 interface ProductDetailProps {
   product: productDetail;
@@ -21,7 +19,7 @@ interface ProductDetailProps {
 
 const ProdcutDetail = ({ product }: ProductDetailProps) => {
   const [products, setProducts]: any = useState();
-
+  const cart = useCart();
   const [productQuantity, setProductQuantity] = useState(1);
 
 
@@ -73,42 +71,15 @@ const ProdcutDetail = ({ product }: ProductDetailProps) => {
   }
 
   async function handelAddToCart(value: any) {
-    // if (!isAuthenticated) {
-    //   let productCart: any = {
-    //     variant: value ?? null,
-    //     _id: product._id,
-    //     name: product.name,
-    //     price: product.salePrice ?? product.price,
-    //     image: product.images[0],
-    //     quantity: 1 /* i nop du chu ca mo */,
-    //   };
-    //   let flag = false;
-    //   const localCarts = JSON.parse(
-    //     window.localStorage.getItem("products") as string
-    //   );
-    //   if (localCarts[0] === undefined) {
-    //     productCart.quantity--;
-    //     localCarts.push(productCart);
-    //   }
-    //   for (let i = 0; i < localCarts.length; i++) {
-    //     if (localCarts[i].name === productCart.name) {
-    //       localCarts[i].quantity++;
-    //       flag = true;
-    //       break;
-    //     }
-    //   }
-    //   if (!flag) {
-    //     localCarts.push(productCart);
-    //   }
-    //   window.localStorage.setItem("products", JSON.stringify(localCarts));
-    //   setProducts(window.localStorage.getItem("products") as string);
-    // } else {
-    //   await addProductToCart({
-    //     variables: { username: currentUsername, _id: product._id },
-    //     refetchQueries: [{ query: getProductBooked(currentUsername) }],
-    //   });
-    // }
-    // message.success("Thêm vào giỏ hàng thành công");
+    cart.addToCart({
+      _id: product._id,
+      name: product.name,
+      price: product.price,
+      quantity: productQuantity,
+      image: {
+        url: product.images[0].url,
+      },
+    });
   }
   return (
     <>

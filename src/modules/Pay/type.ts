@@ -9,7 +9,9 @@ export interface DataType {
     price: number;
     quantity: number;
     image: Image;
-    ID_Product: string
+    ID_Product: string;
+    _id: string;
+
 }
 export interface PaymentInformation {
     firstName: string;
@@ -33,7 +35,7 @@ export interface FieldData {
 export interface CustomizedFormProps {
     onChange: (fields: FieldData[]) => void;
     fields: FieldData[];
-    onSubmit: (e:any) => void;
+    onSubmit: (e: any) => void;
 }
 export interface PaymentMethod {
     paymentMethodID: number;
