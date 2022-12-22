@@ -1,15 +1,30 @@
-html {
-    scrollbar-width: none;
-    /* For Firefox */
-    -ms-overflow-style: none;
-    /* For Internet Explorer and Edge */
+.Admin_Layout {
+    header {
+        display: flex;
+        justify-content: space-between;
+
+
+        .admin__header-left {
+            display: inline;
+        }
+
+        .admin__header-right {
+            display: flex;
+            padding-right: 3rem;
+            gap: 1rem;
+            align-items: baseline;
+
+            .noti-button {
+                border: none;
+                border-radius: 10px;
+                height: 30px;
+                width: 30px;
+                @include flex-center;
+            }
+        }
+    }
 }
 
-html::-webkit-scrollbar {
-    width: 0px;
-    /* For Chrome, Safari, and Opera */
-}
-    
 
 
 
@@ -31,6 +46,7 @@ html::-webkit-scrollbar {
         -ms-overflow-style: none !important;
         /* For Internet Explorer and Edge */
     }
+
     .ant-table-body-webkit-scrollbar {
         width: 0px !important;
         /* For Chrome, Safari, and Opera */
