@@ -18,7 +18,11 @@ const useCart = () => {
             window.localStorage.setItem("products", JSON.stringify(cart));
         },
         removeFromCart: (product: any) => {
-            cart = cart.filter((item: any) => item._id !== product._id);
+            const index = cart.findIndex((item: any) => item._id === product._id);
+            if (index === -1) {
+                return;
+            }
+            cart.splice(index, 1);
             window.localStorage.setItem("products", JSON.stringify(cart));
         },
         getCartLength: (): number => {
