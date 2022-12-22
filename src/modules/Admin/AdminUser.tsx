@@ -1,16 +1,37 @@
-import { Drawer } from "antd";
+import { Drawer, Table } from "antd";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { usersData } from "../utils/DataGenerate";
 import AdminContentHeader from "./AdminContentHeader";
 import AdminCreateUser from "./AdminCreateUser";
 
-// const userColumns = [
+const userColumns = [
+  {
+    title: "Username",
+    dataIndex: "username",
+    key: "username",
+  },
+  {
+    title: "Email",
+    dataIndex: "email",
+    key: "email",
+  },
+  {
+    title: "Date Created",
+    dataIndex: "dateCreated",
+    key: "dateCreated",
+  },
+  {
+    title: "Address",
+    dataIndex: "address",
+    key: "address",
+  }
+]
 
 
 function AdminUser() {
   const title = "User Management";
-  const userData: any = [];
-  const [dataSource, setDataSource] = useState(userData);
+  const [dataSource, setDataSource] = useState(usersData(5));
   const navigate = useNavigate();
 
   const [searchValue, setSearchValue] = useState("");
@@ -84,21 +105,21 @@ function AdminUser() {
       >
         {contentDrawer}
       </Drawer>
-      {/* {!loading ? (
-        <Table
-          size="small"
-          columns={userColumns}
-          dataSource={dataSource}
-          scroll={{ y: 265 }}
-          onRow={(record, rowIndex) => {
-            return {
-              onDoubleClick: (event) => {
-                showDrawer(record);
-              },
-            };
-          }}
-        />
-      ) : (
+      {/* {!loading ? ( */}
+      <Table
+        size="small"
+        columns={userColumns}
+        dataSource={dataSource}
+        scroll={{ y: 265 }}
+        onRow={(record, rowIndex) => {
+          return {
+            onDoubleClick: (event) => {
+              showDrawer(record);
+            },
+          };
+        }}
+      />
+      {/* ) : (
         <Loader />
       )} */}
     </>
