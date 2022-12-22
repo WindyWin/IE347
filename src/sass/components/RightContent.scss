@@ -4,7 +4,7 @@
 
     tr {
       height: 30px !important;
-      border: 2px solid #c4c4c4 !important;
+      border: 2px solid $gray-color !important;
 
       th {
         font-size: 15px !important;
@@ -80,8 +80,8 @@
       font-size: 20px;
       color: #6e3b3b !important;
       font-weight: 500 !important;
-      border-bottom: 2px solid #c4c4c4 !important;
-      border-top: 2px solid #c4c4c4 !important;
+      border-bottom: 2px solid $gray-color !important;
+      border-top: 2px solid $gray-color !important;
     }
   }
 }
@@ -148,7 +148,7 @@
       }
 
       .button__frame {
-        border: 1px solid #c4c4c4;
+        border: 1px solid $gray-color;
         margin: 0 auto;
         border-radius: 10px;
         width: 114px;
@@ -158,22 +158,22 @@
           border: none;
           background-color: transparent;
           cursor: pointer;
-          color: #c4c4c4;
+          color: $gray-color;
           padding: 0px 12px;
           position: relative;
         }
 
         button:first-child {
-          border-right: 1px solid #c4c4c4;
+          border-right: 1px solid $gray-color;
         }
 
         button:last-child {
-          border-left: 1px solid #c4c4c4;
+          border-left: 1px solid $gray-color;
         }
 
         span {
           padding: 15px;
-          color: #c4c4c4;
+          color: $gray-color;
         }
       }
     }
