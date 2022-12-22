@@ -32,9 +32,9 @@ export const userColumns = [
     title: "Carts",
     dataIndex: "productsBooked",
     key: "productsBooked",
-    render: (text: any) => <p>{text[0]?text.map((txt:any) => {
+    render: (text: any) => <p>{text[0] ? text.map((txt: any) => {
       return txt.ID_Product + ', '
-    }):"Cart Empty"}</p>,
+    }) : "Cart Empty"}</p>,
   },
 ];
 
@@ -144,22 +144,24 @@ export interface BlogData {
 }
 
 export const blogColumns = [
-  {
-    title: "ID",
-    dataIndex: "id",
-    key: "id",
-    sorter: (a: { id: number }, b: { id: number }) => a.id - b.id,
-    width: "7%",
-  },
+  // {
+  //   title: "ID",
+  //   dataIndex: "id",
+  //   key: "id",
+  //   sorter: (a: { id: number }, b: { id: number }) => a.id - b.id,
+  //   width: "7%",
+  // },
   {
     title: "Title",
     dataIndex: "title",
     key: "title",
+    sorter: (a: any, b: any) => a.title.localeCompare(b.title),
   },
   {
     title: "Date",
     dataIndex: "date",
     key: "date",
+    sorter: (a: any, b: any) => Date.parse(a.date) - Date.parse(b.date),
   },
   {
     title: "Author",
@@ -179,17 +181,18 @@ export const blogColumns = [
 ];
 
 export const productColumn: any = [
-  {
-    title: "ID",
-    dataIndex: "id",
-    key: "id",
-    sorter: (a: { id: number }, b: { id: number }) => a.id - b.id,
-    width: "7%",
-  },
+  // {
+  //   title: "ID",
+  //   dataIndex: "id",
+  //   key: "id",
+  //   sorter: (a: { id: number }, b: { id: number }) => a.id - b.id,
+  //   width: "7%",
+  // },
   {
     title: "Product Name",
     dataIndex: "name",
     key: "name",
+    sorter: (a: any, b: any) => a.name.localeCompare(b.name),
   },
   {
     title: "Price",
