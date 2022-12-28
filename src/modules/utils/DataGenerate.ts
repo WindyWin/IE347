@@ -103,7 +103,7 @@ export const usersData = (length: number) => {
             username: faker.internet.userName(),
             email: faker.internet.email(),
             avatar: faker.image.imageUrl(),
-            dateCreated: faker.date.past().toISOString(),
+            dateCreated: faker.date.past().toUTCString(),
             address: faker.address.streetAddress(),
         });
     }
