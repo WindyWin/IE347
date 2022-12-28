@@ -20,6 +20,21 @@ export const commentGenerator = (num: number = 1): comment[] => {
     return commentList;
 };
 
+export const adminCommentGenerator = (num: number = 1): any[] => {
+    const commentList: any = [];
+    for (let i = 0; i < num; i++) {
+        commentList.push({
+            id: i,
+            content: faker.lorem.paragraph(),
+            rating: Math.floor(Math.random() * 5) + 1,
+            user: faker.name.firstName(),
+            date: faker.date.past().toISOString(),
+            idProduct: faker.database.mongodbObjectId(),
+            idBlog: faker.database.mongodbObjectId(),
+        });
+    }
+    return commentList;
+};
 
 export const productData = productRawData.map(data => {
 
@@ -93,4 +108,18 @@ export const usersData = (length: number) => {
         });
     }
     return users;
+}
+export const bookingData = (length: number) => {
+    const booking: any[] = [];
+    for (let i = 0; i < length; i++) {
+        booking.push({
+            id: faker.database.mongodbObjectId(),
+            name: faker.internet.userName(),
+            email: faker.internet.email(),
+            avatar: faker.image.imageUrl(),
+            dateCreated: faker.date.past().toISOString(),
+            address: faker.address.streetAddress(),
+        });
+    }
+    return booking;
 }

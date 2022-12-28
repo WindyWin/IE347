@@ -1,5 +1,6 @@
 import { Drawer, Table } from "antd";
 import React, { useEffect, useState } from "react";
+import { adminCommentGenerator } from "../utils/DataGenerate";
 import AdminAddComment from "./AdminAddComment";
 import AdminContentHeader from "./AdminContentHeader";
 import { commentColumns } from "./type";
@@ -9,7 +10,7 @@ function AdminComment() {
 
   const title = "Comment Management";
   const initialValues: any[] = [];
-  const [dataSource, setDataSource] = useState(initialValues);
+  const [dataSource, setDataSource] = useState(adminCommentGenerator());
   const [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
