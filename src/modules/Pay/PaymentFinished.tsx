@@ -2,18 +2,19 @@ import { Button, Typography } from "antd";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartFinishIcon } from "../../assets/icons/CartFinishIcon";
+import useCart from "../Hook/useCart";
 
 
 function PaymentFinished() {
-  window.localStorage.setItem("products", "[]");
+  const cart = useCart();
 
 
 
 
   const navigate = useNavigate();
-  const initialValues: any = { total: 0 };
+  const initialValues: any = { total: cart.getTotalPrice() };
   const [data, setData] = useState(initialValues);
-
+  cart.clearCart();
   const dataFormat = data.total.toLocaleString("vi-VN", {
     style: "currency",
     currency: "VND",

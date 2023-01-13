@@ -40,6 +40,17 @@ const useCart = () => {
             cart = cart.filter((item: any) => item._id !== product._id);
             window.localStorage.setItem("products", JSON.stringify(cart));
         },
+        getTotalPrice: (): number => {
+            return cart.reduce((total: number, item: any) => {
+                return total + item.price * item.quantity;
+            }, 0);
+        },
+        clearCart: () => {
+            cart = [];
+            window.localStorage.setItem("products", JSON.stringify(cart));
+        }
+
+
     }
 }
 

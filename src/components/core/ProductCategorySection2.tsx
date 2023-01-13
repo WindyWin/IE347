@@ -7,6 +7,7 @@ import { product } from "./type";
 interface Props {
   productList: product[];
   sectionName: string;
+  category: string;
   productsPerPage?: number
 }
 const sortFunction = {
@@ -16,19 +17,23 @@ const sortFunction = {
   'desc-name': (a: product, b: product) => b.name.localeCompare(a.name),
 }
 
-const ProductCategorySection2 = ({ productList, sectionName, productsPerPage }: Props) => {
+const ProductCategorySection2 = ({ productList, sectionName, category, productsPerPage }: Props) => {
   const [page, setPage] = useState<number>(0);
   const [productPerPage, setProductPerPage] = useState<number>(productsPerPage ?? 8);
-  // const [products, setProducts] = useState<product[]>([])
+  const [products, setProducts] = useState<product[]>([])
   const [sortType, setSortType] = useState<string>('asc-price');
-  const products = productList
-    .filter((item) => item.categories.includes(categoryTranslate(sectionName)?.dbName ?? ""))
 
 
-  // useEffect(() => {
-  //   setProducts(productList
-  //     )
-  // }, [products, sectionName, productList])
+  useEffect(() => {
+    if (sectionName === "Kết quả tìm kiếm:") {
+      setProducts(productList);
+      return;
+    }
+
+    setProducts(productList
+      .filter((item) => item.categories.includes(category))
+    )
+  }, [category, sectionName, productList])
 
   function handlPageChange(page: number, pageSize: number) {
     setPage(page - 1);

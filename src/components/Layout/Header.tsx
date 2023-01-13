@@ -16,7 +16,7 @@ const Header = () => {
   const onSearch = (value: string) => {
     if (value) {
       sessionStorage.setItem("valueSearch", value);
-      navigate(`/search/${toSlug(value)}`);
+      navigate(`/search?keyword=${toSlug(value)}`);
     }
   };
 

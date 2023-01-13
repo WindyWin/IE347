@@ -1,18 +1,24 @@
 import { Col, Row } from "antd";
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Category, ProductCategorySection2 } from "../../components/core";
+import { product } from "../../components/core/type";
+import { getProductByKeyword } from "../../Service/ProductService";
 
 const Search = () => {
-  const location = useLocation();
-  const pathName = location.pathname.split("/");
-  pathName.shift();
-  const path = pathName.map((path) => {
-    return path.split("-").join("");
-  });
-  const initialValue: any[] | (() => any[]) = []
-  const [dataSource, setDataSource] = useState(initialValue);
+  const [searchParam, setSearchParams] = useSearchParams();
+  const [dataSource, setDataSource] = useState(getProductByKeyword(searchParam.get("keyword") || ""));
 
+  useEffect(() => {
+    const value = searchParam.get("keyword");
+    console.log("key wword: " + value);
+    if (value) {
+      const data = getProductByKeyword(value);
+      setDataSource(data);
+      // console.table(dataSource);
+      // console.table(data);
+    }
+  }, [searchParam]);
 
 
 
@@ -42,10 +48,12 @@ const Search = () => {
           {/* {loading ? (
             <Loader />
           ) : ( */}
-          <ProductCategorySection2
-            productList={dataSource}
-            sectionName="Product"
-          />
+          {!!dataSource ?
+            <ProductCategorySection2
+              productList={dataSource}
+              sectionName="Kết quả tìm kiếm:"
+              category="all"
+            /> : <h1>Không tìm thấy sản phẩm nào</h1>}
           {/* )} */}
         </Col>
       </Row>

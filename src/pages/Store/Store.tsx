@@ -40,6 +40,7 @@ function Store() {
               sectionName={
                 categoryTranslate(path[path.length - 1])?.name ?? ""
               }
+              category={categoryTranslate(path[path.length - 1])?.dbName ?? ""}
             />
 
           </Col>
