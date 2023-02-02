@@ -46,7 +46,7 @@ const Header = () => {
         </Link>
         <Search
           className="search_input"
-          placeholder="Tìm kiếm..."
+          placeholder="Tìm kiếm sản phẩm"
           onSearch={onSearch}
           enterButton
         />

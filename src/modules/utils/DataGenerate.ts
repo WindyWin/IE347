@@ -49,10 +49,11 @@ export const productData = productRawData.map(data => {
             size: data.variant?.size,
             color: data.variant?.color
         },
-        images: data.images.map(image =>
-        ({
-            url: faker.image.imageUrl(640, 480, "cats")
-        })),
+        images: data.images,
+        // .map(image =>
+        // ({
+        //     url: faker.image.imageUrl(640, 480, "cats")
+        // })),
         categories: data.categories,
         slug: data.slugName,
         content: data.content,

@@ -37,6 +37,7 @@ const ProductCategorySection2 = ({ productList, sectionName, category, productsP
 
   function handlPageChange(page: number, pageSize: number) {
     setPage(page - 1);
+    setProductPerPage(pageSize);
   }
   function handleSortChange(value: string) {
     setSortType(value);
@@ -99,7 +100,7 @@ const ProductCategorySection2 = ({ productList, sectionName, category, productsP
               );
             })}
         </Row>
-        <Pagination className="pagination" current={page + 1} total={products.length} onChange={handlPageChange} defaultCurrent={1} pageSize={productPerPage}  ></Pagination>
+        <Pagination className="pagination" current={page + 1} total={products.length} onChange={handlPageChange} defaultCurrent={1} pageSize={productPerPage}    ></Pagination>
       </div>
     </div>
   );
